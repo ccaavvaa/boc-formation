@@ -1,0 +1,13 @@
+{
+	"$schema": "http://phenix.salviadeveloppement.com/json-schema/mdr-schema.json",
+	"version": "1.0.0",
+	"type": "object",
+	"title": "Person",
+	"name": "Person",
+	"primaryKey" : "personId",
+	"properties": {
+		"personId" : { "type": "string", "format": "code"},		
+		"name": {"type": "string"},
+		"firstName": {"type": "string"}
+	}
+}

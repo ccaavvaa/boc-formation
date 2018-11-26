@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "name": "ViewModelInitResponse",
+    "properties": {
+        "data": {},
+        "id": {
+            "type": "string"
+        },
+        "idSession": {
+            "type": "string"
+        }
+    }
+}

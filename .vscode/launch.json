@@ -1,0 +1,181 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Lancer",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/index.js",
+            "stopOnEntry": false,
+            "args": [],
+            "cwd": "${workspaceRoot}",
+            "preLaunchTask": null,
+            "runtimeExecutable": null,
+            "runtimeArgs": [
+                "--nolazy",
+            ],
+            "env": {
+                "NODE_ENV": "development",
+                "PORT": "3000"
+            },
+            "console": "internalConsole",
+            "sourceMaps": true,
+            "outFiles": [
+                "${workspaceRoot}/lib/**/*.js",
+                "${workspaceRoot}/test/**/*.js",
+                "${workspaceRoot}/node_modules/@phoenix/boc/lib/**/*.js",
+                "${workspaceRoot}/node_modules/@phoenix/boc-server/lib/**/*.js",
+                "${workspaceRoot}/node_modules/@phoenix/mdr-object-store/lib/**/*.js"
+            ],
+            "skipFiles": [
+                "<node_internals>/internal/async_hooks.js",
+                "<node_internals>/internal/inspector_async_hook.js",
+                "<node_internals>/fs.js",
+                "${workspaceRoot}/node_modules/bluebird/js/release/util.js",
+                "${workspaceRoot}/node_modules/bluebird/js/release/debuggability.js",
+                "${workspaceRoot}/node_modules/bluebird/js/release/async.js",
+                "${workspaceRoot}/node_modules/jszip/.*"
+            ],
+            "protocol": "inspector"
+        },
+        {
+            "name": "Test debug",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/node_modules/mocha/bin/_mocha",
+            "stopOnEntry": false,
+            "args": [
+                "--reporter",
+                "spec",
+                "--timeout",
+                "0",
+                "--debug",
+                "--require",
+                "source-map-support/register",
+                "./test/**/*.js"
+            ],
+            "cwd": "${workspaceRoot}",
+            "preLaunchTask": null,
+            "runtimeExecutable": null,
+            "runtimeArgs": [
+                "--nolazy"
+            ],
+            "env": {
+                "NODE_ENV": "development",
+                "DEBUG_TEST": "true"
+            },
+            "console": "internalConsole",
+            "sourceMaps": true,
+            "outFiles": [
+                "${workspaceRoot}/**/*.js",
+                "${workspaceRoot}/node_modules/@phoenix/boc/**/*.js",
+                "${workspaceRoot}/node_modules/@phoenix/boc-server/**/*.js"
+            ],
+            "protocol": "auto",
+            "skipFiles": [
+                "<node_internals>/internal/async_hooks.js",
+                "<node_internals>/internal/inspector_async_hook.js",
+                "<node_internals>/fs.js",
+                "${workspaceRoot}/node_modules/bluebird/**/*.js",
+                "${workspaceRoot}/node_modules/jszip/**/*.js"
+            ]
+        },
+        {
+            "name": "Lancer (mode production)",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/dist/index.js",
+            "stopOnEntry": false,
+            "args": [],
+            "cwd": "${workspaceRoot}",
+            "preLaunchTask": null,
+            "runtimeExecutable": null,
+            "runtimeArgs": [
+                "--nolazy"
+            ],
+            "env": {
+                "NODE_ENV": "development",
+                "PORT": "3000"
+            },
+            "console": "internalConsole",
+            "sourceMaps": true,
+            "outFiles": [],
+            "skipFiles": [
+                "<node_internals>/**/*.js"
+            ]
+        },
+        {
+            "name": "Gulp",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/node_modules/gulp/bin/gulp.js",
+            "stopOnEntry": false,
+            "args": [
+                "build"
+            ],
+            "cwd": "${workspaceRoot}",
+            "preLaunchTask": null,
+            "runtimeExecutable": null,
+            "runtimeArgs": [
+                "--nolazy"
+            ],
+            "env": {
+                "NODE_ENV": "development",
+                "PORT": "3000"
+            },
+            "console": "internalConsole",
+            "sourceMaps": true,
+            "outFiles": [],
+            "skipFiles": [
+                "<node_internals>/**/*.js"
+            ]
+        },
+        {
+            "name": "Gulp prod",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/node_modules/gulp/bin/gulp.js",
+            "stopOnEntry": false,
+            "args": [
+                "production"
+            ],
+            "cwd": "${workspaceRoot}",
+            "preLaunchTask": null,
+            "runtimeExecutable": null,
+            "runtimeArgs": [
+                "--nolazy"
+            ],
+            "env": {
+                "NODE_ENV": "development",
+                "PORT": "3000"
+            },
+            "console": "internalConsole",
+            "sourceMaps": true,
+            "outFiles": [],
+            "skipFiles": [
+                "<node_internals>/**/*.js"
+            ]
+        },
+        {
+            "name": "Attacher",
+            "type": "node",
+            "request": "attach",
+            "port": 5858,
+            "address": "localhost",
+            "restart": false,
+            "sourceMaps": false,
+            "outFiles": [],
+            "localRoot": "${workspaceRoot}",
+            "remoteRoot": null
+        },
+        {
+            "name": "Attacher au processus",
+            "type": "node",
+            "request": "attach",
+            "processId": "${command.PickProcess}",
+            "port": 5858,
+            "sourceMaps": false,
+            "outFiles": []
+        }
+    ]
+}

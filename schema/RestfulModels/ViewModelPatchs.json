@@ -1,0 +1,15 @@
+{
+    "type": "array",
+    "name": "ViewModelPatchs",
+    "items": {
+        "op": {
+            "type": "string"
+        },
+        "path": {
+            "type": "string"
+        },
+        "value": {
+            "type": "string"
+        }
+    }
+}
