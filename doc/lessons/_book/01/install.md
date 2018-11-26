@@ -1,6 +1,6 @@
 * clone https://github.com/ccaavvaa/boc-formation.git
 * switch local git:  tag 'lesson01' et créer une branche
-* installer une base MDR dans http://localhost/MDR/Basic
+* install une base MDR dans http://localhost/MDR/Basic
 * installer les paquets:
 ````
 yarn install
