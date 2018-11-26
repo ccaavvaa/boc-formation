@@ -1,3 +1,4 @@
 ## Sommaire
 * [Installation](./01/install.md)
-* [Premier modèle](./02/first.md)
+* [Prémiere modèle](./02/first.md)
+    * [Exercices](./02/ex02.md)
