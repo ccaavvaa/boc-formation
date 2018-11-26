@@ -22,4 +22,7 @@ export class PersonRules {
             Helpers.checkEmptyProp(target, propName);
         }
     }
+    public static calculateAge(person: Person): number {
+        return person ? Helpers.getAge(person.birthDate) : undefined;
+    }
 }

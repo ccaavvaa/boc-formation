@@ -4,7 +4,7 @@ import * as chai from 'chai';
 import '../debug-test';
 import { Person } from '../../lib/models/Person';
 import { createContainer } from '../test-helpers';
-import { personNotEmptyProperties } from '../../lib/rules/person/PersonRules';
+import { personNotEmptyProperties, PersonRules } from '../../lib/rules/person/PersonRules';
 // tslint:disable:only-arrow-functions
 
 const assert = chai.assert;
@@ -56,5 +56,18 @@ describe('Person', function () {
                 (e) => e.error.srcId === 'PersonRules.notEmptyPropertyOnChange')
             );
         }
+    });
+    it('age is not defined', async function () {
+        assert(PersonRules.calculateAge(null) === undefined);
+    });
+    it('calculate age', async function () {
+        const c = createContainer();
+        const person = await c.createNew<Person>(Person);
+        const personAge = 5;
+        const todayDate = new Date();
+        const birthDate = new boc.DateTime('date', todayDate).addYears(-personAge).addDays(-2);
+        await person.set_birthDate(birthDate);
+        const age = PersonRules.calculateAge(person);
+        assert(age === personAge);
     });
 });

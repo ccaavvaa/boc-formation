@@ -9,4 +9,19 @@ export class Helpers {
             target.errors.addError(message, propName);
         }
     }
+    public static getAge(birthDate: boc.DateTime, atDate?: boc.DateTime): number {
+        if (!birthDate || !birthDate.isSet()) {
+            return 0;
+        }
+        const d2 = atDate && atDate.isSet() ? atDate.toJSDate() : new Date();
+        const d1 = birthDate.toJSDate();
+        let age = d2.getFullYear() - d1.getFullYear();
+        for (const f of [d1.getMonth, d1.getDate]) {
+            if (f.apply(d2) < f.apply(d1)) {
+                age--;
+                break;
+            }
+        }
+        return age;
+    }
 }
