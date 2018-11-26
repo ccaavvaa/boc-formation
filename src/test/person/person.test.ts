@@ -70,4 +70,19 @@ describe('Person', function () {
         const age = PersonRules.calculateAge(person);
         assert(age === personAge);
     });
+    it('calculate full name', async function () {
+        const c = createContainer();
+        const person = await c.createNew<Person>(Person);
+        let fullName: string;
+        fullName = PersonRules.calculateFullName(null);
+        assert(fullName === undefined);
+
+        await person.set_name('Doe');
+        fullName = PersonRules.calculateFullName(person);
+        assert(fullName === 'Doe');
+
+        await person.set_firstName('John');
+        fullName = PersonRules.calculateFullName(person);
+        assert(fullName === 'John Doe');
+    });
 });

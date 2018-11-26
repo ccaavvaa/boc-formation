@@ -5,6 +5,7 @@ import '../debug-test';
 import { Person } from '../../lib/models/Person';
 import { PersonView } from '../../lib/views/person/PersonView';
 import { createContainer } from '../test-helpers';
+import { PersonRules } from '../../lib/rules/person/PersonRules';
 // tslint:disable:only-arrow-functions
 
 const assert = chai.assert;
@@ -61,6 +62,16 @@ describe('PersonView', function () {
         await person.set_birthDate(person.birthDate.addYears(1));
         assert(view.age === personAge - 1);
     });
+    it('calculate full name', async function () {
+        const c = createContainer();
+        const person = await c.createNew<Person>(Person);
+        await person.set_name('Doe');
+        await person.set_firstName('John');
+        const view = await person.createViewModel<PersonView>(PersonView);
+        assert(view.fullName === PersonRules.calculateFullName(person));
+        await person.set_name('Pepe');
+        assert(view.fullName === PersonRules.calculateFullName(person));
+    });
     it('Should serialize person properties', async function () {
         const c = createContainer();
         const person = await c.createNew<Person>(Person);
@@ -79,6 +90,7 @@ describe('PersonView', function () {
         assert(data.firstName === person.firstName);
         assert(data.birthDate === person.birthDate.toString());
         assert(data.age === personAge);
+        assert(data.fullName === PersonRules.calculateFullName(person));
         assert(data.personKey === person.id);
     });
 

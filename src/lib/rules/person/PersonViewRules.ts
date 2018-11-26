@@ -40,4 +40,23 @@ export class PersonViewRules {
         const value = PersonRules.calculateAge(personView.model);
         await personView.set_age(value);
     }
+
+    @boc.ModelChanged({
+        constr: PersonView,
+    })
+    public static async calculateFullNameOnModelChanged(target: PersonView, msg: boc.Message) {
+        const value = PersonRules.calculateFullName(target.model);
+        await target.set_fullName(value);
+    }
+
+    @boc.PropChange({
+        constr: PersonView,
+        propName: ['name', 'firstName'],
+        path: '#model',
+    })
+    public static async calculateFullName(personView: PersonView) {
+        const value = PersonRules.calculateFullName(personView.model);
+        await personView.set_fullName(value);
+    }
+
 }

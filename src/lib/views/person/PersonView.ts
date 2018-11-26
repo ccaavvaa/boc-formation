@@ -32,4 +32,16 @@ export class PersonView extends boc.ViewModel<Person> {
     public set_age(value: number) {
         return this.setProp('age', value);
     }
+    @boc.PropertyInfo({
+        type: 'string',
+        jsFormats: ['string'],
+    })
+    public get fullName(): string {
+        return this.getProp('fullName');
+    }
+
+    public set_fullName(value: string) {
+        return this.setProp('fullName', value);
+    }
+
 }

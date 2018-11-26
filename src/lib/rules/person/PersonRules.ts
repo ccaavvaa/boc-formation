@@ -25,4 +25,10 @@ export class PersonRules {
     public static calculateAge(person: Person): number {
         return person ? Helpers.getAge(person.birthDate) : undefined;
     }
+    public static calculateFullName(person: Person): string {
+        const fullName = person ?
+            [person.firstName, person.name].filter((s) => s).join(' ') :
+            undefined;
+        return fullName;
+    }
 }
