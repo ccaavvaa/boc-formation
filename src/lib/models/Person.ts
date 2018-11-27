@@ -10,7 +10,37 @@ import * as boc from '@phoenix/boc';
 export class Person extends boc.ModelObject {
     public static defineRoles(): boc.IRoleDeclaration[] {
         return [
+            // relation manager
+            {
+                constr: boc.Reference,
+                settings: {
+                    roleProp: 'manager',
+                    oppositeConstr: Person,
+                    key: ['refManager'],
+                    oppositeKey: ['id'],
+                }
+            },
+            // relation teamMembers
+            {
+                constr: boc.Reference,
+                settings: {
+                    roleProp: 'teamMembers',
+                    oppositeConstr: Person,
+                    key: ['id'],
+                    oppositeKey: ['refManager'],
+                }
+            },
         ];
+    }
+
+    // read only property refManager
+    @boc.PropertyInfo({
+        jsFormats: ['integer'],
+        type: 'integer',
+        title: 'Person',
+    })
+    public get refManager(): number {
+        return this.getProp('refManager');
     }
 
     // read only property id
@@ -77,5 +107,23 @@ export class Person extends boc.ModelObject {
 
     public set_birthDate(value: boc.DateTime): Promise<boc.IRuleExecutionResult[]> {
         return this.setProp('birthDate', value);
+    }
+
+    // relation manager
+    public manager(): Promise<Person> {
+        return this.getRoleProp('manager');
+    }
+
+    public set_manager(value: Person): Promise<boc.IRuleExecutionResult[]> {
+        return this.setRoleProp('manager', value);
+    }
+
+    // relation teamMembers
+    public teamMembers(): Promise<Person> {
+        return this.getRoleProp('teamMembers');
+    }
+
+    public set_teamMembers(value: Person): Promise<boc.IRuleExecutionResult[]> {
+        return this.setRoleProp('teamMembers', value);
     }
 }

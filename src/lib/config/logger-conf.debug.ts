@@ -7,7 +7,8 @@ import * as _ from 'lodash';
 import { Utils } from '../tools/utils';
 const rootDir = Utils.rootFolder;
 const includeTags: string[] = ['session', 'errorHandler'];
-const excludeTags: string[] = ['objectStore', 'action', 'setProp', 'messageRouter', 'mdrDataDriver'];
+const excludeTags: string[] = [
+    'objectStore', 'action', 'setProp', 'messageRouter', 'mdrDataDriver'];
 const f = filter({
     filterFunc: (info: ILog): boolean => {
         const result =

@@ -25,18 +25,30 @@ export class Metadata extends boc.ModelMetadata {
     }
 
     private registerTypes(): void {
-        this.registerTypeSettings('string', { constr: boc.SimpleValue, adapter: boc.StringAdapter });
-        this.registerTypeSettings('integer', { constr: boc.SimpleValue, adapter: boc.IntegerAdapter });
-        this.registerTypeSettings('number', { constr: boc.SimpleValue, adapter: boc.DecimalAdapter });
+        this.registerTypeSettings('string', {
+            constr: boc.SimpleValue, adapter: boc.StringAdapter
+        });
+        this.registerTypeSettings('integer', {
+            constr: boc.SimpleValue, adapter: boc.IntegerAdapter
+        });
+        this.registerTypeSettings('number', {
+            constr: boc.SimpleValue, adapter: boc.DecimalAdapter
+        });
         this.registerTypeSettings('code', { maxLength: 32 });
         this.registerTypeSettings('date-time', { adapter: boc.DateTimeAdapter });
         this.registerTypeSettings('date', { adapter: boc.DateTimeAdapter });
-        this.registerTypeSettings('money', { constr: boc.SimpleValue, adapter: boc.DecimalAdapter, decimals: 2 });
+        this.registerTypeSettings('money', {
+            constr: boc.SimpleValue, adapter: boc.DecimalAdapter, decimals: 2
+        });
         this.registerTypeSettings('positive', { minimum: 0 });
         this.registerTypeSettings('notempty', { minLength: 1 });
         this.registerTypeSettings('memo', { maxLength: 4000 });
-        this.registerTypeSettings('rate', { constr: boc.SimpleValue, adapter: boc.DecimalAdapter, decimals: 3 });
-        this.registerTypeSettings('boolean', { constr: boc.SimpleValue, adapter: boc.BooleanAdapter });
+        this.registerTypeSettings('rate', {
+            constr: boc.SimpleValue, adapter: boc.DecimalAdapter, decimals: 3
+        });
+        this.registerTypeSettings('boolean', {
+            constr: boc.SimpleValue, adapter: boc.BooleanAdapter
+        });
     }
 }
 export class ViewServer extends boc.Server {

@@ -12,14 +12,16 @@ const level: LogLevel | 'none' = options.log && options.log.level ? options.log.
 let winstonLogger = null;
 
 if (level !== 'none') {
-    let logDir: string = options.log && options.log.logDirectory ? options.log.logDirectory : 'logs';
+    let logDir: string =
+        options.log && options.log.logDirectory ? options.log.logDirectory : 'logs';
     if (!path.isAbsolute(logDir)) {
         logDir = path.join(Utils.rootFolder, logDir);
     }
     if (!fs.existsSync(logDir)) {
         fs.mkdirSync(logDir);
     }
-    const fileName =  options.log && options.log.logFileName ? options.log.logFileName : 'accession-logs';
+    const fileName =
+        options.log && options.log.logFileName ? options.log.logFileName : 'accession-logs';
     const logFileName = path.join(logDir, fileName);
     const truncateLogFile = false;
 

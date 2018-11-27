@@ -22,8 +22,9 @@ export const defaultConfig: IConfig = {
     // Section des options du middleware de session
     session: {
         timeOut: 20 * 60, // durée de vie maximale d'une session après le dernier accès en seconde
-        clearInterval: 3 * 60, // interval de temps entre deux nettoyages de sessions perimées en seconde
-        cookieName: 'Basic' // nom du cookie utilisé pour déterminer le nom de la session utilisée par une requête
+        clearInterval: 3 * 60, // interval de temps entre deux nettoyages de sessions perimées en s
+        cookieName: 'Basic' // nom du cookie utilisé pour déterminer le nom de la session utilisée
+        // par une requête
     },
     // Section des options du middleware qui logge des erreurs http
     log: {
