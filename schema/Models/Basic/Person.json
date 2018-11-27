@@ -4,10 +4,46 @@
 	"type": "object",
 	"title": "Person",
 	"name": "Person",
-	"primaryKey" : "personId",
+	"primaryKey": "personId",
 	"properties": {
-		"personId" : { "type": "string", "format": "code"},		
-		"name": {"type": "string"},
-		"firstName": {"type": "string"}
+		"personId": {
+			"type": "string",
+			"format": "code"
+		},
+		"name": {
+			"type": "string"
+		},
+		"firstName": {
+			"type": "string"
+		},
+		"birthDate": {
+			"type":"string",
+			"format":"date"
+		},
+		"refManager": {
+			"type": "integer"
+		}
+	},
+	"relations": {
+		"manager": {
+			"foreignEntity": "Person",
+			"foreignKey": [
+				"id"
+			],
+			"key": [
+				"refManager"
+			],
+			"multiplicity": "one",
+			"inverseMultiplicity": "many"
+		},
+		"teamMembers": {
+			"foreignEntity": "Person",
+			"foreignKey": [
+				"refManager"
+			],
+			"key": "id",
+			"multiplicity": "one",
+			"inverseMultiplicity": "many"
+		}
 	}
 }

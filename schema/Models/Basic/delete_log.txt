@@ -1,0 +1,4 @@
+
+C:\Projects\Phenix\boc-formation\schema\Models\Basic>curl -X DELETE "http://localhost/MDR/Basic/odata/$entities(Project)" 
+
+C:\Projects\Phenix\boc-formation\schema\Models\Basic>curl -X DELETE "http://localhost/MDR/Basic/odata/$entities(Person)" 

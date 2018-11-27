@@ -1,0 +1,750 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Rélations · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../03/ex03.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Sommaire</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../01/install.html">
+            
+                <a href="../01/install.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../02/first.html">
+            
+                <a href="../02/first.html">
+            
+                    
+                    Prémiere modèle
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../02/ex02.html">
+            
+                <a href="../02/ex02.html">
+            
+                    
+                    Exercices
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../03/first-view.html">
+            
+                <a href="../03/first-view.html">
+            
+                    
+                    Premier view
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../03/ex03.html">
+            
+                <a href="../03/ex03.html">
+            
+                    
+                    Exercices
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5" data-path="relations.html">
+            
+                <a href="relations.html">
+            
+                    
+                    Rélations
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Rélations</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="r&#xE9;lations">R&#xE9;lations</h2>
+<p><img src="../assets/images/uml/4aa08f6b39d045566cccde44b7d634dac62dd2c4.png"></p>
+<p>Types de r&#xE9;lations:</p>
+<pre><code>* compositions
+    * HasOne
+    * HasMany
+* simples
+    * Reference
+    * Many
+</code></pre><ul>
+<li><p>Ajouter le d&#xE9;finitions classes et les r&#xE9;lations dans sch&#xE9;ma</p>
+<p>  Project.json:</p>
+</li>
+</ul>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;$schema&quot;</span>: <span class="hljs-string">&quot;http://phenix.salviadeveloppement.com/json-schema/mdr-schema.json&quot;</span>,
+    <span class="hljs-string">&quot;version&quot;</span>: <span class="hljs-string">&quot;1.0.0&quot;</span>,
+    <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+    <span class="hljs-string">&quot;title&quot;</span>: <span class="hljs-string">&quot;Project&quot;</span>,
+    <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Project&quot;</span>,
+    <span class="hljs-string">&quot;primaryKey&quot;</span>: <span class="hljs-string">&quot;code&quot;</span>,
+    <span class="hljs-string">&quot;properties&quot;</span>: {
+        <span class="hljs-string">&quot;code&quot;</span>: {
+            <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+            <span class="hljs-string">&quot;format&quot;</span>: <span class="hljs-string">&quot;code&quot;</span>
+        },
+        <span class="hljs-string">&quot;name&quot;</span>: {
+            <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+        },
+        <span class="hljs-string">&quot;todos&quot;</span>: {
+            <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;array&quot;</span>,
+            <span class="hljs-string">&quot;items&quot;</span>: {
+                <span class="hljs-string">&quot;$ref&quot;</span>: <span class="hljs-string">&quot;#/definitions/TodoRef&quot;</span>
+            }
+        },
+        <span class="hljs-string">&quot;members&quot;</span>: {
+            <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;array&quot;</span>,
+            <span class="hljs-string">&quot;items&quot;</span>: {
+                <span class="hljs-string">&quot;$ref&quot;</span>: <span class="hljs-string">&quot;#/definitions/ProjectMemberRef&quot;</span>
+            }
+        }
+    },
+    <span class="hljs-string">&quot;definitions&quot;</span>: {
+        <span class="hljs-string">&quot;ProjectMemberRef&quot;</span>: {
+            <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+            <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;ProjectMember&quot;</span>,
+            <span class="hljs-string">&quot;title&quot;</span>: <span class="hljs-string">&quot;Project Member&quot;</span>,
+            <span class="hljs-string">&quot;properties&quot;</span>: {
+                <span class="hljs-string">&quot;role&quot;</span>: {
+                    <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                    <span class="hljs-string">&quot;format&quot;</span>: <span class="hljs-string">&quot;code&quot;</span>
+                },
+                <span class="hljs-string">&quot;personId&quot;</span>: {
+                    <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                    <span class="hljs-string">&quot;format&quot;</span>: <span class="hljs-string">&quot;code&quot;</span>
+                }
+            },
+            <span class="hljs-string">&quot;relations&quot;</span>: {
+                <span class="hljs-string">&quot;person&quot;</span>: {
+                    <span class="hljs-string">&quot;foreignEntity&quot;</span>: <span class="hljs-string">&quot;Person&quot;</span>,
+                    <span class="hljs-string">&quot;foreignKey&quot;</span>: [
+                        <span class="hljs-string">&quot;personId&quot;</span>
+                    ],
+                    <span class="hljs-string">&quot;key&quot;</span>: [
+                        <span class="hljs-string">&quot;personId&quot;</span>
+                    ],
+                    <span class="hljs-string">&quot;multiplicity&quot;</span>: <span class="hljs-string">&quot;one&quot;</span>,
+                    <span class="hljs-string">&quot;inverseMultiplicity&quot;</span>: <span class="hljs-string">&quot;many&quot;</span>
+                }
+            }
+        },
+        <span class="hljs-string">&quot;TodoRef&quot;</span>: {
+            <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+            <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Todo&quot;</span>,
+            <span class="hljs-string">&quot;title&quot;</span>: <span class="hljs-string">&quot;Todo item&quot;</span>,
+            <span class="hljs-string">&quot;properties&quot;</span>: {
+                <span class="hljs-string">&quot;title&quot;</span>: {
+                    <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+                },
+                <span class="hljs-string">&quot;progress&quot;</span>: {
+                    <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;integer&quot;</span>
+                },
+                <span class="hljs-string">&quot;dueDate&quot;</span>: {
+                    <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                    <span class="hljs-string">&quot;format&quot;</span>: <span class="hljs-string">&quot;date&quot;</span>
+                },
+                <span class="hljs-string">&quot;personId&quot;</span>: {
+                    <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                    <span class="hljs-string">&quot;format&quot;</span>: <span class="hljs-string">&quot;code&quot;</span>
+                }
+            },
+            <span class="hljs-string">&quot;relations&quot;</span>: {
+                <span class="hljs-string">&quot;person&quot;</span>: {
+                    <span class="hljs-string">&quot;foreignEntity&quot;</span>: <span class="hljs-string">&quot;Person&quot;</span>,
+                    <span class="hljs-string">&quot;foreignKey&quot;</span>: [
+                        <span class="hljs-string">&quot;personId&quot;</span>
+                    ],
+                    <span class="hljs-string">&quot;key&quot;</span>: [
+                        <span class="hljs-string">&quot;personId&quot;</span>
+                    ],
+                    <span class="hljs-string">&quot;multiplicity&quot;</span>: <span class="hljs-string">&quot;one&quot;</span>,
+                    <span class="hljs-string">&quot;inverseMultiplicity&quot;</span>: <span class="hljs-string">&quot;many&quot;</span>
+                }
+            }
+        }
+    }
+}
+</code></pre>
+<pre><code>Person.json
+</code></pre><pre><code class="lang-json">{
+    <span class="hljs-string">&quot;$schema&quot;</span>: <span class="hljs-string">&quot;http://phenix.salviadeveloppement.com/json-schema/mdr-schema.json&quot;</span>,
+    <span class="hljs-string">&quot;version&quot;</span>: <span class="hljs-string">&quot;1.0.0&quot;</span>,
+    <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+    <span class="hljs-string">&quot;title&quot;</span>: <span class="hljs-string">&quot;Person&quot;</span>,
+    <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Person&quot;</span>,
+    <span class="hljs-string">&quot;primaryKey&quot;</span>: <span class="hljs-string">&quot;personId&quot;</span>,
+    <span class="hljs-string">&quot;properties&quot;</span>: {
+        <span class="hljs-string">&quot;personId&quot;</span>: {
+            <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+            <span class="hljs-string">&quot;format&quot;</span>: <span class="hljs-string">&quot;code&quot;</span>
+        },
+        <span class="hljs-string">&quot;name&quot;</span>: {
+            <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+        },
+        <span class="hljs-string">&quot;firstName&quot;</span>: {
+            <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+        },
+        <span class="hljs-string">&quot;birthDate&quot;</span>: {
+            <span class="hljs-string">&quot;type&quot;</span>:<span class="hljs-string">&quot;string&quot;</span>,
+            <span class="hljs-string">&quot;format&quot;</span>:<span class="hljs-string">&quot;date&quot;</span>
+        },
+        <span class="hljs-string">&quot;refManager&quot;</span>: {
+            <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;integer&quot;</span>
+        }
+    },
+    <span class="hljs-string">&quot;relations&quot;</span>: {
+        <span class="hljs-string">&quot;manager&quot;</span>: {
+            <span class="hljs-string">&quot;foreignEntity&quot;</span>: <span class="hljs-string">&quot;Person&quot;</span>,
+            <span class="hljs-string">&quot;foreignKey&quot;</span>: [
+                <span class="hljs-string">&quot;id&quot;</span>
+            ],
+            <span class="hljs-string">&quot;key&quot;</span>: [
+                <span class="hljs-string">&quot;refManager&quot;</span>
+            ],
+            <span class="hljs-string">&quot;multiplicity&quot;</span>: <span class="hljs-string">&quot;one&quot;</span>,
+            <span class="hljs-string">&quot;inverseMultiplicity&quot;</span>: <span class="hljs-string">&quot;many&quot;</span>
+        },
+        <span class="hljs-string">&quot;teamMembers&quot;</span>: {
+            <span class="hljs-string">&quot;foreignEntity&quot;</span>: <span class="hljs-string">&quot;Person&quot;</span>,
+            <span class="hljs-string">&quot;foreignKey&quot;</span>: [
+                <span class="hljs-string">&quot;refManager&quot;</span>
+            ],
+            <span class="hljs-string">&quot;key&quot;</span>: <span class="hljs-string">&quot;id&quot;</span>,
+            <span class="hljs-string">&quot;multiplicity&quot;</span>: <span class="hljs-string">&quot;one&quot;</span>,
+            <span class="hljs-string">&quot;inverseMultiplicity&quot;</span>: <span class="hljs-string">&quot;many&quot;</span>
+        }
+    }
+}
+</code></pre>
+<ul>
+<li><p>G&#xE9;n&#xE9;rer les classes model</p>
+<pre><code>  npm run entity
+</code></pre></li>
+<li><p>Ajouter les tests
+  src/test/project/project.test.ts</p>
+</li>
+</ul>
+<pre><code class="lang-typescript">describe(<span class="hljs-string">&apos;Project&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    it(<span class="hljs-string">&apos;code, name should not be empty&apos;</span>, async <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">const</span> c = createContainer();
+        <span class="hljs-keyword">const</span> project = await c.createNew&lt;Project&gt;(Project);
+        await project.validate();
+        assert(project.hasErrors);
+        <span class="hljs-keyword">let</span> propertyErrors: boc.IErrorInfo[];
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> p of projectNotEmptyProperties) {
+            propertyErrors = project.errors.errors.get(p);
+            assert(propertyErrors &amp;&amp; propertyErrors.length);
+            <span class="hljs-keyword">const</span> err = propertyErrors.find(
+                (e) =&gt; e.error.srcId === <span class="hljs-string">&apos;ProjectRules.notEmptyProperties&apos;</span>
+            );
+            assert(err);
+            assert(err.error.message === c.t(<span class="hljs-string">&apos;Valeur obligatoire&apos;</span>));
+            <span class="hljs-keyword">const</span> value = <span class="hljs-string">&apos;not empty&apos;</span>;
+            await project.setProp(p, value);
+            await project.validate();
+            propertyErrors = project.errors.errors.get(p);
+            assert(!propertyErrors || !propertyErrors.find(
+                (e) =&gt; e.error.srcId === <span class="hljs-string">&apos;ProjectRules.notEmptyProperties&apos;</span>)
+            );
+        }
+    });
+
+    it(<span class="hljs-string">&apos;members only once&apos;</span>, async <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">const</span> c = createContainer();
+        <span class="hljs-keyword">const</span> project = await c.createNew&lt;Project&gt;(Project);
+        <span class="hljs-keyword">const</span> persons: Person[] = [];
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">2</span>; i++) {
+            <span class="hljs-keyword">const</span> person = await c.createNew&lt;Person&gt;(Person);
+            <span class="hljs-keyword">const</span> n = i.toString();
+            await person.set_personId(n);
+            await person.set_name(n);
+            await person.set_firstName(n);
+
+            <span class="hljs-keyword">const</span> projectMember = await c.createNew&lt;ProjectMember&gt;(ProjectMember);
+            await projectMember.set_person(person);
+            await projectMember.set_role(<span class="hljs-string">&apos;dev&apos;</span>);
+            await project.members.link(projectMember);
+            persons.push(person);
+        }
+
+        project.members.link(await c.createNew&lt;ProjectMember&gt;(ProjectMember));
+        <span class="hljs-keyword">const</span> m = await c.createNew&lt;ProjectMember&gt;(ProjectMember);
+        await m.set_person(persons[<span class="hljs-number">0</span>]);
+        await m.set_role(<span class="hljs-string">&apos;dev&apos;</span>);
+        await project.members.link(m);
+        await project.validate();
+        assert(project.hasErrors);
+        <span class="hljs-keyword">let</span> membersErrors = project.errors.errors.get(<span class="hljs-string">&apos;members&apos;</span>);
+        assert(membersErrors &amp;&amp; membersErrors.length);
+        <span class="hljs-keyword">const</span> err = membersErrors.find(
+            (e) =&gt; e.error.srcId === <span class="hljs-string">&apos;ProjectRules.membersOnlyOnce&apos;</span>
+        );
+        assert(
+            err &amp;&amp;
+            err.error.message ===
+            c.t(<span class="hljs-string">&apos;Les membres suivants sont d&#xE9;clares plusieurs fois dans le projet.\n&apos;</span>)
+            .concat(<span class="hljs-string">&apos;0 0&apos;</span>)
+        );
+
+        await project.members.unlink(m);
+        await project.validate();
+        membersErrors = project.errors.errors.get(<span class="hljs-string">&apos;members&apos;</span>);
+        assert(
+            !membersErrors
+            || !membersErrors.length
+            || !membersErrors.find(
+                (e) =&gt; e.error.srcId === <span class="hljs-string">&apos;ProjectRules.membersOnlyOnce&apos;</span>
+            )
+        );
+    });
+    it(<span class="hljs-string">&apos;calculate project name&apos;</span>, async <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">const</span> c = createContainer();
+        <span class="hljs-keyword">const</span> project = await c.createNew&lt;Project&gt;(Project);
+        <span class="hljs-keyword">let</span> v: <span class="hljs-built_in">string</span> = ProjectRules.getProjectName(project);
+        assert(v);
+        await project.set_code(<span class="hljs-string">&apos;c&apos;</span>);
+        v = ProjectRules.getProjectName(project);
+        assert(v === project.code);
+        await project.set_name(<span class="hljs-string">&apos;n&apos;</span>);
+        v = ProjectRules.getProjectName(project);
+        assert(v === project.name);
+    });
+});
+</code></pre>
+<pre><code>dans src/test/project/project-member.test.ts
+</code></pre><pre><code class="lang-typescript">describe(<span class="hljs-string">&apos;Project Member&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    it(<span class="hljs-string">&apos;role should not be empty&apos;</span>, async <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">const</span> c = createContainer();
+        <span class="hljs-keyword">const</span> projectMember = await c.createNew&lt;ProjectMember&gt;(ProjectMember);
+        await projectMember.validate();
+        assert(projectMember.hasErrors);
+        <span class="hljs-keyword">let</span> propertyErrors: boc.IErrorInfo[];
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> p of projectMemberNotEmptyProperties) {
+            propertyErrors = projectMember.errors.errors.get(p);
+            assert(propertyErrors &amp;&amp; propertyErrors.length);
+            <span class="hljs-keyword">const</span> err = propertyErrors.find(
+                (e) =&gt; e.error.srcId === <span class="hljs-string">&apos;ProjectMemberRules.notEmptyProperties&apos;</span>
+            );
+            assert(err);
+            assert(err.error.message === c.t(<span class="hljs-string">&apos;Valeur obligatoire&apos;</span>));
+            <span class="hljs-keyword">const</span> value = <span class="hljs-string">&apos;not empty&apos;</span>;
+            await projectMember.setProp(p, value);
+            await projectMember.validate();
+            propertyErrors = projectMember.errors.errors.get(p);
+            assert(!propertyErrors || !propertyErrors.find(
+                (e) =&gt; e.error.srcId === <span class="hljs-string">&apos;ProjectMemberRules.notEmptyProperties&apos;</span>)
+            );
+        }
+    });
+    it(<span class="hljs-string">&apos;person should not be empty&apos;</span>, async <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">const</span> c = createContainer();
+        <span class="hljs-keyword">const</span> projectMember = await c.createNew&lt;ProjectMember&gt;(ProjectMember);
+        await projectMember.validate();
+        assert(projectMember.hasErrors);
+        <span class="hljs-keyword">let</span> propertyErrors: boc.IErrorInfo[];
+        propertyErrors = projectMember.errors.errors.get(<span class="hljs-string">&apos;person&apos;</span>);
+        assert(propertyErrors &amp;&amp; propertyErrors.length);
+        <span class="hljs-keyword">const</span> err = propertyErrors.find(
+            (e) =&gt; e.error.srcId === <span class="hljs-string">&apos;ProjectMemberRules.checkPersonReference&apos;</span>
+        );
+        assert(err);
+        assert(err.error.message === c.t(<span class="hljs-string">&apos;Valeur obligatoire&apos;</span>));
+        <span class="hljs-keyword">const</span> value = await c.createNew&lt;Person&gt;(Person);
+        await projectMember.set_person(value);
+        await projectMember.validate();
+        propertyErrors = projectMember.errors.errors.get(<span class="hljs-string">&apos;person&apos;</span>);
+        assert(!propertyErrors || !propertyErrors.find(
+            (e) =&gt; e.error.srcId === <span class="hljs-string">&apos;ProjectMemberRules.checkPersonReference&apos;</span>)
+        );
+    });
+    it(<span class="hljs-string">&apos;should block deleting referenced person&apos;</span>, async <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">const</span> c = createContainer();
+        <span class="hljs-keyword">const</span> project = await c.createNew&lt;Project&gt;(Project);
+        await project.set_name(<span class="hljs-string">&apos;P1&apos;</span>);
+        <span class="hljs-keyword">const</span> projectMember = await c.createNew&lt;ProjectMember&gt;(ProjectMember);
+        await project.members.link(projectMember);
+
+        <span class="hljs-keyword">const</span> person = await c.createNew&lt;Person&gt;(Person);
+        await person.set_name(<span class="hljs-string">&apos;J&apos;</span>);
+        await projectMember.set_person(person);
+        await person.toDelete();
+        assert(!person.isDeleted);
+        <span class="hljs-keyword">const</span> personErrors = person.errors.errors.get(<span class="hljs-string">&apos;$&apos;</span>);
+        assert(personErrors);
+        <span class="hljs-keyword">const</span> err = personErrors.find(
+            (e) =&gt; e.error.srcId === <span class="hljs-string">&apos;ProjectMemberRules.doNotDeleteReferencedPerson&apos;</span>
+        );
+        assert(err);
+        assert(err.error.isTransient);
+        <span class="hljs-keyword">const</span> expectedMessage =
+            c.t(<span class="hljs-string">&apos;0 participe dans les projets suivants:\n&apos;</span>,
+                PersonRules.calculateFullName(person))
+                .concat(<span class="hljs-string">&apos;P1&apos;</span>);
+        assert(err.error.message === expectedMessage);
+    });
+});
+</code></pre>
+<ul>
+<li>Ajouter les r&#xE8;gles m&#xE9;tiers
+  dans src/lib/rules/project/ProjectRules.ts</li>
+</ul>
+<pre><code class="lang-typescript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> projectNotEmptyProperties: <span class="hljs-built_in">Array</span>&lt;keyof Project &amp; <span class="hljs-built_in">string</span>&gt; = [
+    <span class="hljs-string">&apos;code&apos;</span>, <span class="hljs-string">&apos;name&apos;</span>,
+];
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ProjectRules {
+
+    @boc.Validate({
+        constr: Project,
+    })
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> async notEmptyProperties(target: Project, msg: boc.Message) {
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> propName of projectNotEmptyProperties) {
+            Helpers.checkEmptyProp(target, propName);
+        }
+    }
+
+    @boc.Validate({
+        constr: Project,
+    })
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> async membersOnlyOnce(target: Project, msg: boc.Message) {
+        <span class="hljs-keyword">const</span> c = target.container;
+        <span class="hljs-keyword">const</span> members = await target.members.toArray();
+        <span class="hljs-keyword">const</span> nullPersonId = <span class="hljs-string">&apos;nullPersonId&apos;</span>;
+        <span class="hljs-keyword">const</span> counts = _.countBy(members, (m: ProjectMember) =&gt;
+            m.personId ? m.personId : nullPersonId);
+        <span class="hljs-keyword">const</span> personIds = <span class="hljs-built_in">Object</span>.getOwnPropertyNames(counts)
+            .filter((k) =&gt; k !== nullPersonId &amp;&amp; counts[k] &gt; <span class="hljs-number">1</span>);
+        <span class="hljs-keyword">if</span> (personIds.length) {
+            <span class="hljs-keyword">const</span> personNames: <span class="hljs-built_in">string</span>[] = [];
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> personId of personIds) {
+                <span class="hljs-keyword">const</span> person = await c.getOne&lt;Person&gt;(Person, { personId });
+                personNames.push(PersonRules.calculateFullName(person));
+            }
+            <span class="hljs-keyword">const</span> error: <span class="hljs-built_in">string</span> =
+                c.t(<span class="hljs-string">&apos;Les membres suivants sont d&#xE9;clares plusieurs fois dans le projet.\n&apos;</span>)
+                .concat(
+                    personNames.join(<span class="hljs-string">&apos;\n&apos;</span>)
+                );
+            target.errors.addError(error, <span class="hljs-string">&apos;members&apos;</span>);
+        }
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> getProjectName(p: Project): <span class="hljs-built_in">string</span> {
+        <span class="hljs-keyword">return</span> p.name || p.code || p.id.toString();
+    }
+}
+</code></pre>
+<pre><code>dans src/lib/rules/project/ProjectMemberRules
+</code></pre><pre><code class="lang-typescript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> projectMemberNotEmptyProperties: <span class="hljs-built_in">Array</span>&lt;keyof ProjectMember &amp; <span class="hljs-built_in">string</span>&gt; = [
+    <span class="hljs-string">&apos;role&apos;</span>,
+];
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ProjectMemberRules {
+
+    @boc.Validate({
+        constr: ProjectMember
+    })
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> notEmptyProperties(target: ProjectMember, msg: boc.Message) {
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> propName of projectMemberNotEmptyProperties) {
+            Helpers.checkEmptyProp(target, propName);
+        }
+    }
+    @boc.Deleting({
+        constr: Person
+    })
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> async doNotDeleteReferencedPerson(target: Person, msg: boc.Message) {
+        <span class="hljs-keyword">const</span> c = target.container;
+        <span class="hljs-keyword">const</span> projectMembers =
+            await c.getMany&lt;ProjectMember&gt;(ProjectMember, { personId: target.personId });
+
+        <span class="hljs-comment">/* istanbul ignore else */</span>
+        <span class="hljs-keyword">if</span> (projectMembers.length) {
+            <span class="hljs-keyword">const</span> projects: <span class="hljs-built_in">string</span>[] = [];
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> m of projectMembers) {
+                <span class="hljs-keyword">const</span> project = await m.parentObject();
+                projects.push(ProjectRules.getProjectName(project));
+            }
+            <span class="hljs-keyword">const</span> err =
+                c.t(<span class="hljs-string">&apos;0 participe dans les projets suivants:\n&apos;</span>,
+                    PersonRules.calculateFullName(target))
+                    .concat(
+                        projects.join(<span class="hljs-string">&apos;\n&apos;</span>)
+                    );
+            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> boc.BOErr(<span class="hljs-number">500</span>, err);
+        }
+    }
+
+    @boc.Validate({
+        constr: ProjectMember
+    })
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> async checkPersonReference(target: ProjectMember, msg: boc.Message) {
+        <span class="hljs-keyword">const</span> c = target.container;
+        <span class="hljs-keyword">const</span> p = await target.person();
+        <span class="hljs-keyword">if</span> (!p) {
+            target.errors.addError(c.t(<span class="hljs-string">&apos;Valeur obligatoire&apos;</span>), <span class="hljs-string">&apos;person&apos;</span>);
+        }
+    }
+}
+</code></pre>
+<ul>
+<li>Ajouter les classes dans le serveur</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../03/ex03.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Exercices">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Rélations","level":"1.5","depth":1,"previous":{"title":"Exercices","level":"1.4.1","depth":2,"path":"03/ex03.md","ref":"./03/ex03.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["uml","livereload"],"pluginsConfig":{"uml":{"format":"png","nailgun":false},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"04/relations.md","mtime":"2018-11-27T14:54:15.239Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-27T14:54:29.098Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

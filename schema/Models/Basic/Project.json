@@ -1,0 +1,93 @@
+{
+    "$schema": "http://phenix.salviadeveloppement.com/json-schema/mdr-schema.json",
+    "version": "1.0.0",
+    "type": "object",
+    "title": "Project",
+    "name": "Project",
+    "primaryKey": "code",
+    "properties": {
+        "code": {
+            "type": "string",
+            "format": "code"
+        },
+        "name": {
+            "type": "string"
+        },
+        "todos": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/TodoRef"
+            }
+        },
+        "members": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/ProjectMemberRef"
+            }
+        }
+    },
+    "definitions": {
+        "ProjectMemberRef": {
+            "type": "object",
+            "name": "ProjectMember",
+            "title": "Project Member",
+            "properties": {
+                "role": {
+                    "type": "string",
+                    "format": "code"
+                },
+                "personId": {
+                    "type": "string",
+                    "format": "code"
+                }
+            },
+            "relations": {
+                "person": {
+                    "foreignEntity": "Person",
+                    "foreignKey": [
+                        "personId"
+                    ],
+                    "key": [
+                        "personId"
+                    ],
+                    "multiplicity": "one",
+                    "inverseMultiplicity": "many"
+                }
+            }
+        },
+        "TodoRef": {
+            "type": "object",
+            "name": "Todo",
+            "title": "Todo item",
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "progress": {
+                    "type": "integer"
+                },
+                "dueDate": {
+                    "type": "string",
+                    "format": "date"
+                },
+                "personId": {
+                    "type": "string",
+                    "format": "code"
+                }
+            },
+            "relations": {
+                "person": {
+                    "foreignEntity": "Person",
+                    "foreignKey": [
+                        "personId"
+                    ],
+                    "key": [
+                        "personId"
+                    ],
+                    "multiplicity": "one",
+                    "inverseMultiplicity": "many"
+                }
+            }
+        }
+    }
+}
