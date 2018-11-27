@@ -5,3 +5,4 @@
 * [Premier view](./03/first-view.md)
     * [Exercices](./03/ex03.md)
 * [Rélations](./04/relations.md)
+    * [Exercices](./04/ex04.md)
