@@ -76,7 +76,7 @@
                 }
             },
             "relations": {
-                "person": {
+                "assignedTo": {
                     "foreignEntity": "Person",
                     "foreignKey": [
                         "personId"

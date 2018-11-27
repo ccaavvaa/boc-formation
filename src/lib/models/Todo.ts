@@ -11,11 +11,11 @@ import { Project } from './Project';
 export class Todo extends boc.ModelObject {
     public static defineRoles(): boc.IRoleDeclaration[] {
         return [
-            // relation person
+            // relation assignedTo
             {
                 constr: boc.Reference,
                 settings: {
-                    roleProp: 'person',
+                    roleProp: 'assignedTo',
                     oppositeConstr: Person,
                     key: ['personId'],
                     oppositeKey: ['personId'],
@@ -108,13 +108,13 @@ export class Todo extends boc.ModelObject {
         return this.setProp('dueDate', value);
     }
 
-    // relation person
-    public person(): Promise<Person> {
-        return this.getRoleProp('person');
+    // relation assignedTo
+    public assignedTo(): Promise<Person> {
+        return this.getRoleProp('assignedTo');
     }
 
-    public set_person(value: Person): Promise<boc.IRuleExecutionResult[]> {
-        return this.setRoleProp('person', value);
+    public set_assignedTo(value: Person): Promise<boc.IRuleExecutionResult[]> {
+        return this.setRoleProp('assignedTo', value);
     }
 
     // relation parentObject

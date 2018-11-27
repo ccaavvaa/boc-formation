@@ -10,6 +10,17 @@ import * as boc from '@phoenix/boc';
 export class Person extends boc.ModelObject {
     public static defineRoles(): boc.IRoleDeclaration[] {
         return [
+            // relation teamMembers
+            {
+                constr: boc.Many,
+                settings: {
+                    roleProp: 'teamMembers',
+                    oppositeConstr: Person,
+                    key: ['id'],
+                    oppositeKey: ['refManager'],
+                    oppositeRoleProp: 'manager',
+                }
+            },
             // relation manager
             {
                 constr: boc.Reference,
@@ -18,16 +29,7 @@ export class Person extends boc.ModelObject {
                     oppositeConstr: Person,
                     key: ['refManager'],
                     oppositeKey: ['id'],
-                }
-            },
-            // relation teamMembers
-            {
-                constr: boc.Reference,
-                settings: {
-                    roleProp: 'teamMembers',
-                    oppositeConstr: Person,
-                    key: ['id'],
-                    oppositeKey: ['refManager'],
+                    oppositeRoleProp: 'teamMembers',
                 }
             },
         ];
@@ -109,6 +111,9 @@ export class Person extends boc.ModelObject {
         return this.setProp('birthDate', value);
     }
 
+    // relation teamMembers
+    public teamMembers: boc.Many<Person, Person>;
+
     // relation manager
     public manager(): Promise<Person> {
         return this.getRoleProp('manager');
@@ -116,14 +121,5 @@ export class Person extends boc.ModelObject {
 
     public set_manager(value: Person): Promise<boc.IRuleExecutionResult[]> {
         return this.setRoleProp('manager', value);
-    }
-
-    // relation teamMembers
-    public teamMembers(): Promise<Person> {
-        return this.getRoleProp('teamMembers');
-    }
-
-    public set_teamMembers(value: Person): Promise<boc.IRuleExecutionResult[]> {
-        return this.setRoleProp('teamMembers', value);
     }
 }
