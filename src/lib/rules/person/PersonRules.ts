@@ -2,13 +2,21 @@ import * as boc from '@phoenix/boc';
 import { Person } from '../../models/Person';
 import { Helpers } from '../helpers';
 import * as _ from 'lodash';
+import { PersonExtension } from '../../views/person/PersonExtension';
 export const personNotEmptyProperties: Array<keyof Person & string> = [
     'personId', 'name', 'firstName', 'birthDate'];
 export class PersonRules {
+
+    @boc.ObjectInit({
+        constr: Person,
+        description: 'Init extension',
+    })
+    public static async initExtension(target: Person, msg: boc.Message) {
+        target.mappings.extension = await target.createViewModel<PersonExtension>(PersonExtension);
+    }
     @boc.PropChange({
         constr: Person,
         propName: personNotEmptyProperties,
-        description: 'Empty value should immediate show error',
     })
     public static async notEmptyPropertyOnChange(target: Person, msg: boc.Message) {
         Helpers.checkEmptyProp(target, msg.body.propName);
@@ -55,11 +63,9 @@ export class PersonRules {
     public static calculateAge(person: Person): number {
         return person ? Helpers.getAge(person.birthDate) : undefined;
     }
-    public static calculateFullName(person: Person): string {
-        const fullName = person ?
-            [person.firstName, person.name].filter((s) => s).join(' ') :
-            undefined;
-        return fullName;
+    public static calculateFullName(data: Person | string[]): string {
+        return Array.isArray(data) ?
+            data.filter((s) => s).join(' ') : this.calculateFullName([data.firstName, data.name]);
     }
     public static async isManager(manager: Person, person: Person): Promise<boolean> {
         if (!person || !manager) {

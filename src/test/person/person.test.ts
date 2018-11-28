@@ -70,23 +70,23 @@ describe('Person', function () {
         const todayDate = new Date();
         const birthDate = new boc.DateTime('date', todayDate).addYears(-personAge).addDays(-2);
         await person.set_birthDate(birthDate);
-        const age = PersonRules.calculateAge(person);
+        const age = person.mappings.extension.age;
         assert(age === personAge);
     });
     it('calculate full name', async function () {
         const c = createContainer();
         const person = await c.createNew<Person>(Person);
         let fullName: string;
-        fullName = PersonRules.calculateFullName(null);
-        assert(fullName === undefined);
+        fullName = person.mappings.extension.fullName;
+        assert(fullName === PersonRules.calculateFullName(person));
 
         await person.set_name('Doe');
-        fullName = PersonRules.calculateFullName(person);
-        assert(fullName === 'Doe');
+        fullName = person.mappings.extension.fullName;
+        assert(fullName === PersonRules.calculateFullName(person));
 
         await person.set_firstName('John');
-        fullName = PersonRules.calculateFullName(person);
-        assert(fullName === 'John Doe');
+        fullName = person.mappings.extension.fullName;
+        assert(fullName === PersonRules.calculateFullName(person));
     });
 
     it('isManager', async function () {

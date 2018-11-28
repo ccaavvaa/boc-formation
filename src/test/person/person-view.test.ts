@@ -58,9 +58,12 @@ describe('PersonView', function () {
         const birthDate = new boc.DateTime('date', todayDate).addYears(-personAge);
         await person.set_birthDate(birthDate);
         const view = await person.createViewModel<PersonView>(PersonView);
-        assert(view.age === personAge);
+        let data: any;
+        data = await view.getAllData(null);
+        assert(data.age === personAge);
         await person.set_birthDate(person.birthDate.addYears(1));
-        assert(view.age === personAge - 1);
+        data = await view.getAllData(null);
+        assert(data.age === personAge - 1);
     });
     it('calculate full name', async function () {
         const c = createContainer();
@@ -68,9 +71,12 @@ describe('PersonView', function () {
         await person.set_name('Doe');
         await person.set_firstName('John');
         const view = await person.createViewModel<PersonView>(PersonView);
-        assert(view.fullName === PersonRules.calculateFullName(person));
+        let data: any;
+        data = await view.getAllData(null, true);
+        assert(data.fullName === PersonRules.calculateFullName(person));
         await person.set_name('Pepe');
-        assert(view.fullName === PersonRules.calculateFullName(person));
+        data = await view.getAllData(null, true);
+        assert(data.fullName === PersonRules.calculateFullName(person));
     });
     it('Should serialize person properties', async function () {
         const c = createContainer();
@@ -90,8 +96,9 @@ describe('PersonView', function () {
         assert(data.firstName === person.firstName);
         assert(data.birthDate === person.birthDate.toString());
         assert(data.age === personAge);
+        assert(data.$states.age.isReadOnly);
+        assert(data.$states.fullName.isReadOnly);
         assert(data.fullName === PersonRules.calculateFullName(person));
         assert(data.personKey === person.id);
     });
-
 });
