@@ -30,7 +30,6 @@
         "@phoenix/boc-interfaces": "^1.1.0",
         "@phoenix/boc-server": "^1.0.0",
         "@phoenix/codata": "^1.1.1",
-        "@phoenix/doc-merge-client": "^0.1.0",
         "@phoenix/logger": "^2.0.0",
         "@phoenix/mdr-object-store": "^1.1.0",
         "@phoenix/server-commons": "^1.0.0",
