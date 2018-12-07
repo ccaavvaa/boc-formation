@@ -24,12 +24,12 @@ describe('Helpers', function () {
         it('checkEmptyProp with empty date', async function () {
             const c = createContainer();
             const person = await c.createNew<Person>(Person);
-            await person.set_birthDate(new boc.DateTime('date'));
+            await person.set_birthDate(new boc.NZDate());
             Helpers.checkEmptyProp(person, 'birthDate');
             assert(person.hasErrors);
             const err = person.errors.errors.get('birthDate')[0];
             assert(err.error.message === c.t('Valeur obligatoire'));
-            await person.set_birthDate(new boc.DateTime('date', 2018, 11, 11));
+            await person.set_birthDate(new boc.NZDate(2018, 11, 11));
             person.errors.clearErrors('birthDate');
             Helpers.checkEmptyProp(person, 'birthDate');
             assert(!person.hasErrors);
@@ -37,52 +37,52 @@ describe('Helpers', function () {
     });
     describe('getAge', function () {
         it('calculate age', function () {
-            const today = new boc.DateTime('date', new Date());
+            const today = boc.NZDate.today();
             const oneYearAgo = today.addYears(-1);
             const oneYearAgo2 = oneYearAgo.addDays(2);
             const tests: Array<{
-                birthDate: boc.DateTime,
-                refDate: boc.DateTime,
+                birthDate: boc.NZDate,
+                refDate: boc.NZDate,
                 age: number
             }> = [
                     {
                         birthDate: null,
-                        refDate: new boc.DateTime('date', 1951, 1, 2),
+                        refDate: new boc.NZDate(1951, 1, 2),
                         age: 0,
                     },
                     {
-                        birthDate: new boc.DateTime('date'),
-                        refDate: new boc.DateTime('date', 1951, 1, 2),
+                        birthDate: new boc.NZDate(),
+                        refDate: new boc.NZDate(1951, 1, 2),
                         age: 0,
                     },
                     {
-                        birthDate: new boc.DateTime('date', 1950, 1, 2),
-                        refDate: new boc.DateTime('date', 1951, 1, 2),
+                        birthDate: new boc.NZDate(1950, 1, 2),
+                        refDate: new boc.NZDate(1951, 1, 2),
                         age: 1,
                     },
                     {
-                        birthDate: new boc.DateTime('date', 1950, 1, 2),
-                        refDate: new boc.DateTime('date', 1951, 1, 2),
+                        birthDate: new boc.NZDate(1950, 1, 2),
+                        refDate: new boc.NZDate(1951, 1, 2),
                         age: 1,
                     },
                     {
-                        birthDate: new boc.DateTime('date', 1950, 1, 2),
-                        refDate: new boc.DateTime('date', 1951, 1, 1),
+                        birthDate: new boc.NZDate(1950, 1, 2),
+                        refDate: new boc.NZDate(1951, 1, 1),
                         age: 0,
                     },
                     {
-                        birthDate: new boc.DateTime('date', 1950, 1, 2),
-                        refDate: new boc.DateTime('date', 1951, 1, 3),
+                        birthDate: new boc.NZDate(1950, 1, 2),
+                        refDate: new boc.NZDate(1951, 1, 3),
                         age: 1,
                     },
                     {
-                        birthDate: new boc.DateTime('date', 1950, 2, 2),
-                        refDate: new boc.DateTime('date', 1951, 3, 3),
+                        birthDate: new boc.NZDate(1950, 2, 2),
+                        refDate: new boc.NZDate(1951, 3, 3),
                         age: 1,
                     },
                     {
-                        birthDate: new boc.DateTime('date', 1950, 2, 2),
-                        refDate: new boc.DateTime('date', 1951, 1, 1),
+                        birthDate: new boc.NZDate(1950, 2, 2),
+                        refDate: new boc.NZDate(1951, 1, 1),
                         age: 0,
                     },
                     {

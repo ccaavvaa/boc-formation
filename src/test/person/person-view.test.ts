@@ -54,8 +54,7 @@ describe('PersonView', function () {
         const c = createContainer();
         const person = await c.createNew<Person>(Person);
         const personAge = 5;
-        const todayDate = new Date();
-        const birthDate = new boc.DateTime('date', todayDate).addYears(-personAge);
+        const birthDate = boc.NZDate.today().addYears(-personAge);
         await person.set_birthDate(birthDate);
         const view = await person.createViewModel<PersonView>(PersonView);
         let data: any;
@@ -82,8 +81,7 @@ describe('PersonView', function () {
         const c = createContainer();
         const person = await c.createNew<Person>(Person);
         const personAge = 5;
-        const todayDate = new Date();
-        const birthDate = new boc.DateTime('date', todayDate).addYears(-personAge);
+        const birthDate = boc.NZDate.today().addYears(-personAge);
         await person.set_birthDate(birthDate);
         await person.set_name('N');
         await person.set_firstName('F');

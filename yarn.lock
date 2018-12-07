@@ -109,10 +109,10 @@
     normalize-path "^2.0.1"
     through2 "^2.0.3"
 
-"@phoenix/bo-code-gen@^0.2.0":
-  version "0.2.1"
-  resolved "http://verdaccio/@phoenix%2fbo-code-gen/-/bo-code-gen-0.2.1.tgz#4ee45be18fcee20152792f2029b192973173e8a0"
-  integrity sha512-vW13UyaaFxzpDi0TH/kKPnYD6UBpeS+phgQlmlJxQHKNBWF6e04Ciyo7lNVup6yDr0/XQyR6EMyWYobHQcfPHQ==
+"@phoenix/bo-code-gen@^0.3.0":
+  version "0.3.0"
+  resolved "http://verdaccio/@phoenix%2fbo-code-gen/-/bo-code-gen-0.3.0.tgz#f5a870b586c32f79360c4facf4ff63c9b516dab4"
+  integrity sha512-onILC70Hlcc1r7tnZrFHY5HF7aOKLfGN5NYmEZMgWjh+AtJsb+jmguijIdNvadnvxw7HsT22yyn2tEZw6SsK5w==
   dependencies:
     "@phoenix/schema" "^1.0.0"
     async-file "^2.0.2"
@@ -133,12 +133,12 @@
   resolved "http://verdaccio/@phoenix%2fboc-prof/-/boc-prof-0.1.0.tgz#5ce9ef876f581a591ffc9390d38fdb24b35b0d78"
   integrity sha512-Y/YCKV2zN+DCVePKSzk2uTc6Flw93ntJaZ7Bb1bAsP/xAEA6o0Wrh0SHf7v4KypPV0iL308utxzA4lyWdJsuMQ==
 
-"@phoenix/boc-server@^1.0.0":
-  version "1.0.3"
-  resolved "http://verdaccio/@phoenix%2fboc-server/-/boc-server-1.0.3.tgz#e53a9955ff15f1322acefbc3c58581676413d122"
-  integrity sha512-eU52rfpqfQ67Dg0kY1TwcIcKtzRjXlpQN/03XpX8hBoUQeQsLB6i9PL/LE2vvKV9iBhO9jMbGyjLSeLQ3nfwoQ==
+"@phoenix/boc-server@^2.0.0":
+  version "2.0.1"
+  resolved "http://verdaccio/@phoenix%2fboc-server/-/boc-server-2.0.1.tgz#bac7d91fab83949b58a0a9d1b636af96f27d7605"
+  integrity sha512-MxBceJTarU1Pkwwmej4V5+jserInu9D4/rw0X9MhUeFhEqfLCqTG3XHul+rxyzs7DNivqFDwX93qsleQnP8yxw==
   dependencies:
-    "@phoenix/boc" "^1.0.0"
+    "@phoenix/boc" "^2.1.0"
     "@phoenix/boc-interfaces" "^1.1.0"
     "@phoenix/server-commons" "^1.0.0"
     "@phoenix/service-route" "^1.0.1"
@@ -149,10 +149,10 @@
     lodash "^4.17.4"
     uuid "^3.3.2"
 
-"@phoenix/boc@^1.0.0":
-  version "1.0.3"
-  resolved "http://verdaccio/@phoenix%2fboc/-/boc-1.0.3.tgz#2ae12e2473467bb200fbb03d15ab70a3c8a667a9"
-  integrity sha512-b1j8jC9DCi/e0jhuM6APrffy+xBUJHReO482EpCbFd0B3pENE8eUCWQb9itARBroYNo62xyyA54LLBXN1ZG4hA==
+"@phoenix/boc@^2.1.0":
+  version "2.1.0"
+  resolved "http://verdaccio/@phoenix%2fboc/-/boc-2.1.0.tgz#06340ab45616aca95b25bb6c89e688bd48aa5c82"
+  integrity sha512-cyR280I6tLuEIgb5N5lSrxR8E9+Ni3SYvxsyhIY3gn3BMHVZRgHoGD0KaR9gHvDU64CiDsPsgVJBfBvUP8YidA==
   dependencies:
     "@phoenix/boc-interfaces" "^1.1.0"
     "@phoenix/codata" "^1.1.1"

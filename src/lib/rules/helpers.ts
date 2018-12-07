@@ -4,20 +4,22 @@ export class Helpers {
     public static checkEmptyProp<T extends { container: boc.Container, [index: string]: any }>
         (target: T, propName: keyof (T) & string, message?: string) {
         const v = target[propName] as any;
-        if (!v || (v instanceof boc.DateTime && !v.isSet())) {
+        if (!v || (v instanceof boc.NZDate && !v.isSet())) {
             message = message || target.container.t('Valeur obligatoire');
             target.errors.addError(message, propName);
         }
     }
-    public static getAge(birthDate: boc.DateTime, atDate?: boc.DateTime): number {
+    public static getAge(birthDate: boc.NZDate, atDate?: boc.NZDate): number {
         if (!birthDate || !birthDate.isSet()) {
             return 0;
         }
-        const d2 = atDate && atDate.isSet() ? atDate.toJSDate() : new Date();
-        const d1 = birthDate.toJSDate();
-        let age = d2.getFullYear() - d1.getFullYear();
-        for (const f of [d1.getMonth, d1.getDate]) {
-            if (f.apply(d2) < f.apply(d1)) {
+        if (!atDate || !atDate.isSet()) {
+            atDate = boc.NZDate.today();
+        }
+        let age = atDate.year - birthDate.year;
+        const props: Array<keyof boc.NZDate> = ['month', 'date'];
+        for (const p of props) {
+            if (atDate[p] < birthDate[p]) {
                 age--;
                 break;
             }

@@ -5,6 +5,8 @@ import { Project } from './models/Project';
 import { ProjectMember } from './models/ProjectMember';
 import { Todo } from './models/Todo';
 import { PersonExtension } from './views/person/PersonExtension';
+import { ProjectView } from './views/project/ProjectView';
+import { ProjectMemberView } from './views/project/ProjectMemberView';
 
 export const businessClasses = [
     HelloWorldView,
@@ -15,5 +17,8 @@ export const businessClasses = [
     // Project
     Project,
     ProjectMember,
-    Todo
+    Todo,
+
+    ProjectView,
+    ProjectMemberView,
 ];

@@ -100,11 +100,11 @@ export class Todo extends boc.ModelObject {
         format: 'date',
         title: 'Todo item',
     })
-    public get dueDate(): boc.DateTime {
+    public get dueDate(): boc.NZDate {
         return this.getProp('dueDate');
     }
 
-    public set_dueDate(value: boc.DateTime): Promise<boc.IRuleExecutionResult[]> {
+    public set_dueDate(value: boc.NZDate): Promise<boc.IRuleExecutionResult[]> {
         return this.setProp('dueDate', value);
     }
 

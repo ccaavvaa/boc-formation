@@ -25,7 +25,7 @@ describe('Person', function () {
             assert(err);
             assert(err.error.message === c.t('Valeur obligatoire'));
             const value: any = p === 'birthDate' ?
-                new boc.DateTime('date', 2018, 10, 10) : 'not empty';
+                new boc.NZDate(2018, 10, 10) : 'not empty';
             await person.setProp(p, value);
             await person.validate();
             propertyErrors = person.errors.errors.get(p);
@@ -40,7 +40,7 @@ describe('Person', function () {
             const person = await c.createNew<Person>(Person);
             for (const p of personNotEmptyProperties) {
                 const value: any = p === 'birthDate' ?
-                    new boc.DateTime('date', 2018, 10, 10) : 'not empty';
+                    new boc.NZDate(2018, 10, 10) : 'not empty';
                 await person.setProp(p, value);
                 await person.setProp(p, null);
                 assert(person.hasErrors);
@@ -67,8 +67,7 @@ describe('Person', function () {
         const c = createContainer();
         const person = await c.createNew<Person>(Person);
         const personAge = 5;
-        const todayDate = new Date();
-        const birthDate = new boc.DateTime('date', todayDate).addYears(-personAge).addDays(-2);
+        const birthDate = boc.NZDate.today().addYears(-personAge).addDays(-2);
         await person.set_birthDate(birthDate);
         const age = person.mappings.extension.age;
         assert(age === personAge);

@@ -26,9 +26,9 @@
         "updep": "yarn upgrade logger boc-interfaces boc boc-server mdr-object-store server-commons sql-data-driver"
     },
     "dependencies": {
-        "@phoenix/boc": "^1.0.0",
+        "@phoenix/boc": "^2.1.0",
         "@phoenix/boc-interfaces": "^1.1.0",
-        "@phoenix/boc-server": "^1.0.0",
+        "@phoenix/boc-server": "^2.0.0",
         "@phoenix/codata": "^1.1.1",
         "@phoenix/logger": "^2.0.0",
         "@phoenix/mdr-object-store": "^1.1.0",
@@ -49,7 +49,7 @@
         "winston-transport": "^4.2.0"
     },
     "devDependencies": {
-        "@phoenix/bo-code-gen": "^0.2.0",
+        "@phoenix/bo-code-gen": "^0.3.0",
         "@phoenix/boc-prof": "^0.1.0",
         "@types/archiver": "^2.1.1",
         "@types/body-parser": "^1.16.7",

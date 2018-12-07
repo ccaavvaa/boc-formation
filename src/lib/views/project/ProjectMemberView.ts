@@ -3,6 +3,7 @@ import { ProjectMember } from '../../models/ProjectMember';
 
 @boc.ClsInfo({
     isTransient: true,
+    modelConstr: ProjectMember,
     mappingDef: [
         {
             from: '#model',
@@ -24,5 +25,16 @@ import { ProjectMember } from '../../models/ProjectMember';
     ],
 })
 export class ProjectMemberView extends boc.ViewModel<ProjectMember> {
+    @boc.PropertyInfo({
+        type: 'string',
+        format: 'code',
+        jsFormats: ['code'],
+    })
+    public get personId(): string {
+        return this.getProp('personId');
+    }
 
+    public set_personId(value: string) {
+        return this.setProp('personId', value);
+    }
 }

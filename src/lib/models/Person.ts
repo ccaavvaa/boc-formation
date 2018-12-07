@@ -103,11 +103,11 @@ export class Person extends boc.ModelObject {
         format: 'date',
         title: 'Person',
     })
-    public get birthDate(): boc.DateTime {
+    public get birthDate(): boc.NZDate {
         return this.getProp('birthDate');
     }
 
-    public set_birthDate(value: boc.DateTime): Promise<boc.IRuleExecutionResult[]> {
+    public set_birthDate(value: boc.NZDate): Promise<boc.IRuleExecutionResult[]> {
         return this.setProp('birthDate', value);
     }
 
