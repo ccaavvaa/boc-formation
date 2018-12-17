@@ -10,11 +10,11 @@
     "@babel/highlight" "^7.0.0"
 
 "@babel/generator@^7.0.0", "@babel/generator@^7.1.6":
-  version "7.1.6"
-  resolved "http://verdaccio/@babel%2fgenerator/-/generator-7.1.6.tgz#001303cf87a5b9d093494a4bf251d7b5d03d3999"
-  integrity sha512-brwPBtVvdYdGxtenbQgfCdDPmtkmUBZPjUoK5SXJEBuHaA5BCubh9ly65fzXz7R6o5rA76Rs22ES8Z+HCc0YIQ==
+  version "7.2.0"
+  resolved "http://verdaccio/@babel%2fgenerator/-/generator-7.2.0.tgz#eaf3821fa0301d9d4aef88e63d4bcc19b73ba16c"
+  integrity sha512-BA75MVfRlFQG2EZgFYIwyT1r6xSkwfP2bdkY/kLZusEYWiJs4xCowab/alaEaT0wSvmVuXGqiefeBlP+7V1yKg==
   dependencies:
-    "@babel/types" "^7.1.6"
+    "@babel/types" "^7.2.0"
     jsesc "^2.5.1"
     lodash "^4.17.10"
     source-map "^0.5.0"
@@ -53,9 +53,9 @@
     js-tokens "^4.0.0"
 
 "@babel/parser@^7.0.0", "@babel/parser@^7.1.2", "@babel/parser@^7.1.6":
-  version "7.1.6"
-  resolved "http://verdaccio/@babel%2fparser/-/parser-7.1.6.tgz#16e97aca1ec1062324a01c5a6a7d0df8dd189854"
-  integrity sha512-dWP6LJm9nKT6ALaa+bnL247GHHMWir3vSlZ2+IHgHgktZQx0L3Uvq2uAWcuzIe+fujRsYWBW2q622C5UvGK9iQ==
+  version "7.2.0"
+  resolved "http://verdaccio/@babel%2fparser/-/parser-7.2.0.tgz#02d01dbc330b6cbf36b76ac93c50752c69027065"
+  integrity sha512-M74+GvK4hn1eejD9lZ7967qAwvqTZayQa3g10ag4s9uewgR7TKjeaT0YMyoq+gVfKYABiWZ4MQD701/t5e1Jhg==
 
 "@babel/template@^7.0.0", "@babel/template@^7.1.0":
   version "7.1.2"
@@ -81,10 +81,10 @@
     globals "^11.1.0"
     lodash "^4.17.10"
 
-"@babel/types@^7.0.0", "@babel/types@^7.1.2", "@babel/types@^7.1.6":
-  version "7.1.6"
-  resolved "http://verdaccio/@babel%2ftypes/-/types-7.1.6.tgz#0adb330c3a281348a190263aceb540e10f04bcce"
-  integrity sha512-DMiUzlY9DSjVsOylJssxLHSgj6tWM9PRFJOGW/RaOglVOK9nzTxoOMfTfRQXGUCUQ/HmlG2efwC+XqUEJ5ay4w==
+"@babel/types@^7.0.0", "@babel/types@^7.1.2", "@babel/types@^7.1.6", "@babel/types@^7.2.0":
+  version "7.2.0"
+  resolved "http://verdaccio/@babel%2ftypes/-/types-7.2.0.tgz#7941c5b2d8060e06f9601d6be7c223eef906d5d8"
+  integrity sha512-b4v7dyfApuKDvmPb+O488UlGuR1WbwMXFsO/cyqMrnfvRAChZKJAYeeglWTjUO1b9UghKKgepAQM5tsvBJca6A==
   dependencies:
     esutils "^2.0.2"
     lodash "^4.17.10"
@@ -122,9 +122,9 @@
     typescript-formatter "^7.1.0"
 
 "@phoenix/boc-interfaces@^1.1.0":
-  version "1.1.0"
-  resolved "http://verdaccio/@phoenix%2fboc-interfaces/-/boc-interfaces-1.1.0.tgz#a55bacd8c3e7a731c6c15151bb23e2f215c6e842"
-  integrity sha512-E5K/9DdfqC6U9uvePsLpK2bFShezOyyoeAaBUc8l6qQPe8HkKAOny3JJtSjyTRSnrcqXgW/bCEkiO2fGIT+Mqg==
+  version "1.3.1"
+  resolved "http://verdaccio/@phoenix%2fboc-interfaces/-/boc-interfaces-1.3.1.tgz#5fcfa43c5c40beb5fa4279609e593fa5b49001a2"
+  integrity sha512-39xfPr2LDKF0z7VzZhFycHsUAM6iwTsDMjgA3o+7y7nc3p8PXlIgdWdnYZkguWR7wk8CJsHdLlmNDBM+dmww4g==
   dependencies:
     "@phoenix/logger" "^2.0.0"
 
@@ -133,12 +133,12 @@
   resolved "http://verdaccio/@phoenix%2fboc-prof/-/boc-prof-0.1.0.tgz#5ce9ef876f581a591ffc9390d38fdb24b35b0d78"
   integrity sha512-Y/YCKV2zN+DCVePKSzk2uTc6Flw93ntJaZ7Bb1bAsP/xAEA6o0Wrh0SHf7v4KypPV0iL308utxzA4lyWdJsuMQ==
 
-"@phoenix/boc-server@^2.0.0":
-  version "2.0.1"
-  resolved "http://verdaccio/@phoenix%2fboc-server/-/boc-server-2.0.1.tgz#bac7d91fab83949b58a0a9d1b636af96f27d7605"
-  integrity sha512-MxBceJTarU1Pkwwmej4V5+jserInu9D4/rw0X9MhUeFhEqfLCqTG3XHul+rxyzs7DNivqFDwX93qsleQnP8yxw==
+"@phoenix/boc-server@^2.1.1":
+  version "2.1.1"
+  resolved "http://verdaccio/@phoenix%2fboc-server/-/boc-server-2.1.1.tgz#fe8e460376175f533184be3a54fc606b1d46fcac"
+  integrity sha512-l51YsrIobg5wsa18xVyKnpcXfXKz4AxcAoOVMRPj+F9PysQKl1ggVqE6ZWUcsFtGJa/3Iw5MAPFelMKjVbZIUw==
   dependencies:
-    "@phoenix/boc" "^2.1.0"
+    "@phoenix/boc" "^2.2.0"
     "@phoenix/boc-interfaces" "^1.1.0"
     "@phoenix/server-commons" "^1.0.0"
     "@phoenix/service-route" "^1.0.1"
@@ -149,10 +149,10 @@
     lodash "^4.17.4"
     uuid "^3.3.2"
 
-"@phoenix/boc@^2.1.0":
-  version "2.1.0"
-  resolved "http://verdaccio/@phoenix%2fboc/-/boc-2.1.0.tgz#06340ab45616aca95b25bb6c89e688bd48aa5c82"
-  integrity sha512-cyR280I6tLuEIgb5N5lSrxR8E9+Ni3SYvxsyhIY3gn3BMHVZRgHoGD0KaR9gHvDU64CiDsPsgVJBfBvUP8YidA==
+"@phoenix/boc@^2.2.0":
+  version "2.2.0"
+  resolved "http://verdaccio/@phoenix%2fboc/-/boc-2.2.0.tgz#376916ab49810dcdd814c50a519a1ac541000c86"
+  integrity sha512-Bcxg1dA3OdOA0tTvgZR+4bpBAH634RijzaTZVDI1Pki64Xf2Cbm2Hq9TrEQx/7dvvmNXh/P098/4N+2dLdGsRg==
   dependencies:
     "@phoenix/boc-interfaces" "^1.1.0"
     "@phoenix/codata" "^1.1.1"
@@ -171,9 +171,9 @@
     uuid "^3.3.2"
 
 "@phoenix/codata@^1.1.0", "@phoenix/codata@^1.1.1":
-  version "1.1.2"
-  resolved "http://verdaccio/@phoenix%2fcodata/-/codata-1.1.2.tgz#f0d5be4f32964b4d9dc0740e41d8a232a043375e"
-  integrity sha512-TG8JYgkuqZBoyirUIGP0uYlrEJk5LKFqC1zUsRBqeae/2C4yGVYWZ24VGhbQrowGLtoeDFlp5cqp3cmateh96Q==
+  version "1.1.3"
+  resolved "http://verdaccio/@phoenix%2fcodata/-/codata-1.1.3.tgz#a1ff592cc200fddda0286909dcda0187e0c4346a"
+  integrity sha512-HKlmMpZsJa7msC/3+uZB5hQZNDRlZf2soVZog7rDUl63lHmCud7I4qqaZ5HF9PxgI51fus3eeQBz/0caQ9vEBg==
 
 "@phoenix/logger@^2.0.0":
   version "2.1.0"
@@ -189,9 +189,9 @@
     winston-transport "^4.2.0"
 
 "@phoenix/mdr-object-store@^1.1.0":
-  version "1.1.3"
-  resolved "http://verdaccio/@phoenix%2fmdr-object-store/-/mdr-object-store-1.1.3.tgz#5878bb514cd67f83cc5f5f881de19265c7873cdb"
-  integrity sha512-abYaS6/Syl3/5m9fzNx+2g9c0HU3FV743dS4456FtTS58bZaOD+KAe04nNaBncU6dDMDIlR6vdANef2ahBpv6g==
+  version "1.1.5"
+  resolved "http://verdaccio/@phoenix%2fmdr-object-store/-/mdr-object-store-1.1.5.tgz#50313583cfbb77d2cb8c7a07e60dd7ee92f05cb5"
+  integrity sha512-tVOQA//TyqXQaxT3WxDbqiIjPcN0lWEF1Tkqiha+kN4iHEyrWA196U54wWMqc/gLCjVjLCQbVLXYsdXv4zx5zA==
   dependencies:
     "@phoenix/boc-interfaces" "^1.1.0"
     "@phoenix/codata" "^1.1.0"
@@ -243,11 +243,12 @@
     underscore "*"
 
 "@phoenix/sql-data-driver@^1.1.0":
-  version "1.1.10"
-  resolved "http://verdaccio/@phoenix%2fsql-data-driver/-/sql-data-driver-1.1.10.tgz#e8dd513e68f0a4ee5f606c5d064782796215717a"
-  integrity sha512-EpTKUBLqg1eVZ4SEF6wSLrqUTquIRVsQlx7O/Ev15NnApc+PESU/f3lttQNOVv9AxXj4S9JiRxVHCOvp5Fo35g==
+  version "1.1.13"
+  resolved "http://verdaccio/@phoenix%2fsql-data-driver/-/sql-data-driver-1.1.13.tgz#01fc5b131a731d8683fc87d0fb0d47597b7706e6"
+  integrity sha512-BPNruDCwbQVJUIvxuhHTUPGpPUpiTEIHTtREJYzvzUUjg0ijSs37VUYXdKrfpFpfrNAsOgDD3eyP9xQXupHKVA==
   dependencies:
     "@phoenix/boc-interfaces" "^1.1.0"
+    "@phoenix/logger" "^2.0.0"
     "@phoenix/schema" "^1.0.0"
     "@types/knex" "^0.15.1"
     knex "^0.15.2"
@@ -262,9 +263,9 @@
     "@types/glob" "*"
 
 "@types/bluebird@*":
-  version "3.5.24"
-  resolved "http://verdaccio/@types%2fbluebird/-/bluebird-3.5.24.tgz#11f76812531c14f793b8ecbf1de96f672905de8a"
-  integrity sha512-YeQoDpq4Lm8ppSBqAnAeF/xy1cYp/dMTif2JFcvmAbETMRlvKHT2iLcWu+WyYiJO3b3Ivokwo7EQca/xfLVJmg==
+  version "3.5.25"
+  resolved "http://verdaccio/@types%2fbluebird/-/bluebird-3.5.25.tgz#59188b871208092e37767e4b3d80c3b3eaae43bd"
+  integrity sha512-yfhIBix+AIFTmYGtkC0Bi+XGjSkOINykqKvO/Wqdz/DuXlAKK7HmhLAXdPIGsV4xzKcL3ev/zYc4yLNo+OvGaw==
 
 "@types/body-parser@*", "@types/body-parser@^1.16.7":
   version "1.17.0"
@@ -368,9 +369,9 @@
     "@types/node" "*"
 
 "@types/lodash@^4.14.86":
-  version "4.14.118"
-  resolved "http://verdaccio/@types%2flodash/-/lodash-4.14.118.tgz#247bab39bfcc6d910d4927c6e06cbc70ec376f27"
-  integrity sha512-iiJbKLZbhSa6FYRip/9ZDX6HXhayXLDGY2Fqws9cOkEQ6XeKfaxB0sC541mowZJueYyMnVUmmG+al5/4fCDrgw==
+  version "4.14.119"
+  resolved "http://verdaccio/@types%2flodash/-/lodash-4.14.119.tgz#be847e5f4bc3e35e46d041c394ead8b603ad8b39"
+  integrity sha512-Z3TNyBL8Vd/M9D9Ms2S3LmFq2sSMzahodD6rCS9V2N44HUMINb75jNkSuwAx7eo2ufqTdfOdtGQpNbieUjPQmw==
 
 "@types/mime@*":
   version "2.0.0"
@@ -395,9 +396,9 @@
     moment "*"
 
 "@types/node@*", "@types/node@^10.11.7", "@types/node@^10.9.4":
-  version "10.12.10"
-  resolved "http://verdaccio/@types%2fnode/-/node-10.12.10.tgz#4fa76e6598b7de3f0cb6ec3abacc4f59e5b3a2ce"
-  integrity sha512-8xZEYckCbUVgK8Eg7lf5Iy4COKJ5uXlnIOnePN0WUwSQggy9tolM+tDJf7wMOnT/JT/W9xDYIaYggt3mRV2O5w==
+  version "10.12.15"
+  resolved "http://verdaccio/@types%2fnode/-/node-10.12.15.tgz#20e85651b62fd86656e57c9c9bc771ab1570bc59"
+  integrity sha512-9kROxduaN98QghwwHmxXO2Xz3MaWf+I1sLVAA6KJDF5xix+IyXVhds0MAfdNwtcpSrzhaTsNB0/jnL86fgUhqA==
 
 "@types/node@^8.0.53":
   version "8.10.38"
@@ -405,9 +406,9 @@
   integrity sha512-EibsnbJerd0hBFaDjJStFrVbVBAtOy4dgL8zZFw0uOvPqzBAX59Ci8cgjg3+RgJIWhsB5A4c+pi+D4P9tQQh/A==
 
 "@types/range-parser@*":
-  version "1.2.2"
-  resolved "http://verdaccio/@types%2frange-parser/-/range-parser-1.2.2.tgz#fa8e1ad1d474688a757140c91de6dace6f4abc8d"
-  integrity sha512-HtKGu+qG1NPvYe1z7ezLsyIaXYyi8SoAVqWDZgDQ8dLrsZvSzUNCwZyfX33uhWxL/SU0ZDQZ3nwZ0nimt507Kw==
+  version "1.2.3"
+  resolved "http://verdaccio/@types%2frange-parser/-/range-parser-1.2.3.tgz#7ee330ba7caafb98090bece86a5ee44115904c2c"
+  integrity sha512-ewFXqrQHlFsgc09MK5jP5iR7vumV/BYayNC6PgJO2LPe8vrnNFyjQjSppfEngITi0qvfKtzFvgKymGheFM9UOA==
 
 "@types/semver@^5.5.0":
   version "5.5.0"
@@ -423,9 +424,9 @@
     "@types/mime" "*"
 
 "@types/superagent@*":
-  version "3.8.4"
-  resolved "http://verdaccio/@types%2fsuperagent/-/superagent-3.8.4.tgz#24a5973c7d1a9c024b4bbda742a79267c33fb86a"
-  integrity sha512-Dnh0Iw6NO55z1beXvlsvUrfk4cd9eL2nuTmUk+rAhSVCk10PGGFbqCCTwbau9D0d2W3DITiXl4z8VCqppGkMPQ==
+  version "3.8.5"
+  resolved "http://verdaccio/@types%2fsuperagent/-/superagent-3.8.5.tgz#a8eb8ec5bce0234e50d6b8bee1941b5bb5686e2d"
+  integrity sha512-h7dQyzEGQFY3Ya8pIu0fxcWaMWC2DDSKR78gHrh6GVnXUqXo/+93wd4RObXA13rKp4ETyym3yq2A0AxROx9AxQ==
   dependencies:
     "@types/cookiejar" "*"
     "@types/node" "*"
@@ -1254,9 +1255,9 @@ colornames@^1.1.1:
   integrity sha1-+IiQMGhcfE/54qVZ9Qd+t2qBb5Y=
 
 colors@^1.2.1:
-  version "1.3.2"
-  resolved "http://verdaccio/colors/-/colors-1.3.2.tgz#2df8ff573dfbf255af562f8ce7181d6b971a359b"
-  integrity sha512-rhP0JSBGYvpcNQj4s5AdShMeE5ahMop96cTeDl/v9qQQm2fYClE2QXZRi8wLzc+GmXSxdIqqbOIAhyObEXDbfQ==
+  version "1.3.3"
+  resolved "http://verdaccio/colors/-/colors-1.3.3.tgz#39e005d546afe01e01f9c4ca8fa50f686a01205d"
+  integrity sha512-mmGt/1pZqYRjMxB1axhTo16/snVZ5krrKkcmMeVKxzECMMXoCgnvTPp10QgHfcbQZw8Dq2jMNG6je4JlWU0gWg==
 
 colorspace@1.1.x:
   version "1.1.1"
@@ -1399,9 +1400,9 @@ copy-props@^2.0.1:
     is-plain-object "^2.0.1"
 
 core-js@^2.4.0:
-  version "2.5.7"
-  resolved "http://verdaccio/core-js/-/core-js-2.5.7.tgz#f972608ff0cead68b841a16a932d0b183791814e"
-  integrity sha512-RszJCAxg/PP6uzXVXL6BsxSXx/B05oJAQ2vkJRjyjrEcNVycaqOmNb5OTxZPE3xa5gwZduqza6L9JOCenh/Ecw==
+  version "2.6.0"
+  resolved "http://verdaccio/core-js/-/core-js-2.6.0.tgz#1e30793e9ee5782b307e37ffa22da0eacddd84d4"
+  integrity sha512-kLRC6ncVpuEW/1kwrOXYX6KQASCVtrh1gQr/UiaVgFlf9WE5Vp+lNe5+h3LuMr5PAucWnnEXwH0nQHRH/gpGtw==
 
 core-util-is@~1.0.0:
   version "1.0.2"
@@ -2010,13 +2011,23 @@ extglob@^2.0.4:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
-fancy-log@1.3.2, fancy-log@^1.1.0, fancy-log@^1.3.2:
+fancy-log@1.3.2:
   version "1.3.2"
   resolved "http://verdaccio/fancy-log/-/fancy-log-1.3.2.tgz#f41125e3d84f2e7d89a43d06d958c8f78be16be1"
   integrity sha1-9BEl49hPLn2JpD0G2VjI94vha+E=
   dependencies:
     ansi-gray "^0.1.1"
     color-support "^1.1.3"
+    time-stamp "^1.0.0"
+
+fancy-log@^1.1.0, fancy-log@^1.3.2:
+  version "1.3.3"
+  resolved "http://verdaccio/fancy-log/-/fancy-log-1.3.3.tgz#dbc19154f558690150a23953a0adbd035be45fc7"
+  integrity sha512-k9oEhlyc0FrVh25qYuSELjr8oxsCoc4/LEZfg2iJJrfEk/tZL9bCoJE47gqAvI2m/AUjluCS4+3I0eTx8n3AEw==
+  dependencies:
+    ansi-gray "^0.1.1"
+    color-support "^1.1.3"
+    parse-node-version "^1.0.0"
     time-stamp "^1.0.0"
 
 fast-safe-stringify@^2.0.4:
@@ -2120,9 +2131,9 @@ findup-sync@^2.0.0:
     resolve-dir "^1.0.1"
 
 fined@^1.0.1:
-  version "1.1.0"
-  resolved "http://verdaccio/fined/-/fined-1.1.0.tgz#b37dc844b76a2f5e7081e884f7c0ae344f153476"
-  integrity sha1-s33IRLdqL15wgeiE98CuNE8VNHY=
+  version "1.1.1"
+  resolved "http://verdaccio/fined/-/fined-1.1.1.tgz#95d88ff329123dd1a6950fdfcd321f746271e01f"
+  integrity sha512-jQp949ZmEbiYHk3gkbdtpJ0G1+kgtLQBNdP5edFP7Fh+WAYceLQz6yO1SBj72Xkg8GVyTB3bBzAYrHJVh5Xd5g==
   dependencies:
     expand-tilde "^2.0.2"
     is-plain-object "^2.0.3"
@@ -2136,9 +2147,9 @@ first-chunk-stream@^1.0.0:
   integrity sha1-Wb+1DNkF9g18OUzT2ayqtOatk04=
 
 flagged-respawn@^1.0.0:
-  version "1.0.0"
-  resolved "http://verdaccio/flagged-respawn/-/flagged-respawn-1.0.0.tgz#4e79ae9b2eb38bf86b3bb56bf3e0a56aa5fcabd7"
-  integrity sha1-Tnmumy6zi/hrO7Vr8+ClaqX8q9c=
+  version "1.0.1"
+  resolved "http://verdaccio/flagged-respawn/-/flagged-respawn-1.0.1.tgz#e7de6f1279ddd9ca9aac8a5971d618606b3aab41"
+  integrity sha512-lNaHNVymajmk0OJMBn8fVUAU1BtDeKIqKoVhk4xAALB57aALg6b4W0MfJ/cUE0g9YBXy5XhSlPIpYIJ7HaY/3Q==
 
 flush-write-stream@^1.0.2:
   version "1.0.3"
@@ -2505,9 +2516,9 @@ globule@~0.1.0:
     minimatch "~0.2.11"
 
 glogg@^1.0.0:
-  version "1.0.1"
-  resolved "http://verdaccio/glogg/-/glogg-1.0.1.tgz#dcf758e44789cc3f3d32c1f3562a3676e6a34810"
-  integrity sha512-ynYqXLoluBKf9XGR1gA59yEJisIL7YHEH4xr3ZziHB5/yl4qWfaK8Js9jGe6gBGCSCKVqiyO30WnRZADvemUNw==
+  version "1.0.2"
+  resolved "http://verdaccio/glogg/-/glogg-1.0.2.tgz#2d7dd702beda22eb3bffadf880696da6d846313f"
+  integrity sha512-5mwUoSuBk44Y4EshyiqcH95ZntbDdTQqA3QYSrxmzj28Ai0vXBGMH1ApSANH14j2sIRtqCEyg6PfsuP7ElOEDA==
   dependencies:
     sparkles "^1.0.0"
 
@@ -3629,12 +3640,12 @@ lru-cache@2:
   integrity sha1-bUUk6LlV+V1PW1iFHOId1y+06VI=
 
 lru-cache@^4.0.1, lru-cache@^4.1.3:
-  version "4.1.4"
-  resolved "http://verdaccio/lru-cache/-/lru-cache-4.1.4.tgz#51cc46e8e6d9530771c857e24ccc720ecdbcc031"
-  integrity sha512-EPstzZ23znHUVLKj+lcXO1KvZkrlw+ZirdwvOmnAnA/1PB4ggyXJ77LRkCqkff+ShQ+cqoxCxLQOh4cKITO5iA==
+  version "4.1.5"
+  resolved "http://verdaccio/lru-cache/-/lru-cache-4.1.5.tgz#8bbe50ea85bed59bc9e33dcab8235ee9bcf443cd"
+  integrity sha512-sWZlbEP2OsHNkXrMl5GYk/jKk70MBng6UU4YI/qGDYbgf6YbP4EvmqISbXCoJiRKs+1bSpFHVgQxvJ17F2li5g==
   dependencies:
     pseudomap "^1.0.2"
-    yallist "^3.0.2"
+    yallist "^2.1.2"
 
 lru-queue@0.1:
   version "0.1.0"
@@ -3867,9 +3878,9 @@ minipass@^2.2.1, minipass@^2.3.4:
     yallist "^3.0.0"
 
 minizlib@^1.1.1:
-  version "1.1.1"
-  resolved "http://verdaccio/minizlib/-/minizlib-1.1.1.tgz#6734acc045a46e61d596a43bb9d9cd326e19cc42"
-  integrity sha512-TrfjCjk4jLhcJyGMYymBH6oTXcWjYbUAXTHDbtnWHjZC25h0cdajHuPE1zxb4DVmu8crfh+HwH/WMuyLG0nHBg==
+  version "1.2.1"
+  resolved "http://verdaccio/minizlib/-/minizlib-1.2.1.tgz#dd27ea6136243c7c880684e8672bb3a45fd9b614"
+  integrity sha512-7+4oTUOWKg7AuL3vloEWekXY2/D20cevzsrNT2kGWm+39J9hGTCBv8VI5Pm5lXZ/o3/mdR4f8rflAPhnQb8mPA==
   dependencies:
     minipass "^2.2.1"
 
@@ -3923,9 +3934,9 @@ mocha@^4.0.1:
     supports-color "4.4.0"
 
 moment@*, moment@^2.22.2:
-  version "2.22.2"
-  resolved "http://verdaccio/moment/-/moment-2.22.2.tgz#3c257f9839fc0e93ff53149632239eb90783ff66"
-  integrity sha1-PCV/mDn8DpP/UxSWMiOeuQeD/2Y=
+  version "2.23.0"
+  resolved "http://verdaccio/moment/-/moment-2.23.0.tgz#759ea491ac97d54bac5ad776996e2a58cc1bc225"
+  integrity sha512-3IE39bHVqFbWWaPOMHZF98Q9c3LDKGTmypMiTM2QygGXXElkFWIH7GxfmlwmY2vwa+wmNsoYZmG2iusf1ZjJoA==
 
 ms@0.7.1:
   version "0.7.1"
@@ -4441,6 +4452,11 @@ parse-json@^4.0.0:
     error-ex "^1.3.1"
     json-parse-better-errors "^1.0.1"
 
+parse-node-version@^1.0.0:
+  version "1.0.0"
+  resolved "http://verdaccio/parse-node-version/-/parse-node-version-1.0.0.tgz#33d9aa8920dcc3c0d33658ec18ce237009a56d53"
+  integrity sha512-02GTVHD1u0nWc20n2G7WX/PgdhNFG04j5fi1OkaJzPWLTcf6vh6229Lta1wTmXG/7Dg42tCssgkccVt7qvd8Kg==
+
 parse-passwd@^1.0.0:
   version "1.0.0"
   resolved "http://verdaccio/parse-passwd/-/parse-passwd-1.0.0.tgz#6d5b934a456993b23d37f40a382d6f1666a8e5c6"
@@ -4646,10 +4662,15 @@ punycode@^2.1.0:
   resolved "http://verdaccio/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
   integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
 
-qs@6.5.2, qs@^6.1.0, qs@^6.2.0, qs@^6.5.2:
+qs@6.5.2:
   version "6.5.2"
   resolved "http://verdaccio/qs/-/qs-6.5.2.tgz#cb3ae806e8740444584ef154ce8ee98d403f3e36"
   integrity sha512-N5ZAX4/LxJmF+7wN74pUD6qAh9/wnvdQcjq9TZjevvXzSUo7bfmw91saqMjzGS2xq91/odN2dW/WOl7qQHNDGA==
+
+qs@^6.1.0, qs@^6.2.0, qs@^6.5.2:
+  version "6.6.0"
+  resolved "http://verdaccio/qs/-/qs-6.6.0.tgz#a99c0f69a8d26bf7ef012f871cdabb0aee4424c2"
+  integrity sha512-KIJqT9jQJDQx5h5uAVPimw6yVg2SekOKu959OCtktD3FjzbpvaPr8i4zzg07DOMz+igA4W/aNM7OV8H37pFYfA==
 
 randomatic@^3.0.0:
   version "3.1.1"
@@ -5134,9 +5155,9 @@ spawn-wrap@^1.4.2:
     which "^1.3.0"
 
 spdx-correct@^3.0.0:
-  version "3.0.2"
-  resolved "http://verdaccio/spdx-correct/-/spdx-correct-3.0.2.tgz#19bb409e91b47b1ad54159243f7312a858db3c2e"
-  integrity sha512-q9hedtzyXHr5S0A1vEPoK/7l8NpfkFYTq6iCY+Pno2ZbdZR6WexZFtqeVGkGxW3TEJMN914Z55EnAGMmenlIQQ==
+  version "3.1.0"
+  resolved "http://verdaccio/spdx-correct/-/spdx-correct-3.1.0.tgz#fb83e504445268f154b074e218c87c003cd31df4"
+  integrity sha512-lr2EZCctC2BNR7j7WzJ2FpDznxky1sjfxvvYEyzxNyb6lZXHODmEoJeFu4JupYlkfha1KZpJyoqiJ7pgA1qq8Q==
   dependencies:
     spdx-expression-parse "^3.0.0"
     spdx-license-ids "^3.0.0"
@@ -5167,9 +5188,9 @@ split-string@^3.0.1, split-string@^3.0.2:
     extend-shallow "^3.0.0"
 
 sprintf-js@^1.1.1:
-  version "1.1.1"
-  resolved "http://verdaccio/sprintf-js/-/sprintf-js-1.1.1.tgz#36be78320afe5801f6cea3ee78b6e5aab940ea0c"
-  integrity sha1-Nr54Mgr+WAH2zqPueLblqrlA6gw=
+  version "1.1.2"
+  resolved "http://verdaccio/sprintf-js/-/sprintf-js-1.1.2.tgz#da1765262bf8c0f571749f2ad6c26300207ae673"
+  integrity sha512-VE0SOVEHCk7Qc8ulkWw3ntAzXuqf7S2lvwQaDLRnUeIEaKNQJzV6BwmLKhOqT61aGhfUMrXeaBk+oDGCzvhcug==
 
 sprintf-js@~1.0.2:
   version "1.0.3"
@@ -5584,9 +5605,9 @@ typescript-formatter@^7.1.0:
     editorconfig "^0.15.0"
 
 typescript@^3.0.0:
-  version "3.1.6"
-  resolved "http://verdaccio/typescript/-/typescript-3.1.6.tgz#b6543a83cfc8c2befb3f4c8fba6896f5b0c9be68"
-  integrity sha512-tDMYfVtvpb96msS1lDX9MEdHrW4yOuZ4Kdc4Him9oU796XldPYF/t2+uKoX0BBa0hXXwDlqYQbXY5Rzjzc5hBA==
+  version "3.2.2"
+  resolved "http://verdaccio/typescript/-/typescript-3.2.2.tgz#fe8101c46aa123f8353523ebdcf5730c2ae493e5"
+  integrity sha512-VCj5UiSyHBjwfYacmDuc/NOk4QQixbE+Wn7MFJuS0nRuPQbof132Pw4u53dm264O8LPc2MVsc7RJNml5szurkg==
 
 uglify-js@^3.1.4:
   version "3.4.9"
@@ -5956,6 +5977,11 @@ y18n@^3.2.1:
   version "3.2.1"
   resolved "http://verdaccio/y18n/-/y18n-3.2.1.tgz#6d15fba884c08679c0d77e88e7759e811e07fa41"
   integrity sha1-bRX7qITAhnnA136I53WegR4H+kE=
+
+yallist@^2.1.2:
+  version "2.1.2"
+  resolved "http://verdaccio/yallist/-/yallist-2.1.2.tgz#1c11f9218f076089a47dd512f93c6699a6a81d52"
+  integrity sha1-HBH5IY8HYImkfdUS+TxmmaaoHVI=
 
 yallist@^3.0.0, yallist@^3.0.2:
   version "3.0.3"

@@ -7,6 +7,7 @@ import { Todo } from './models/Todo';
 import { PersonExtension } from './views/person/PersonExtension';
 import { ProjectView } from './views/project/ProjectView';
 import { ProjectMemberView } from './views/project/ProjectMemberView';
+import { TestFindRelation, PersonData } from './views/find-relation/find-relation';
 
 export const businessClasses = [
     HelloWorldView,
@@ -21,4 +22,7 @@ export const businessClasses = [
 
     ProjectView,
     ProjectMemberView,
+
+    TestFindRelation,
+    PersonData,
 ];

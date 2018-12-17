@@ -36,7 +36,7 @@ export class Metadata extends boc.ModelMetadata {
         });
         this.registerTypeSettings('code', { maxLength: 32 });
         this.registerTypeSettings('date-time', { adapter: boc.DateTimeAdapter });
-        this.registerTypeSettings('date', { adapter: boc.DateTimeAdapter });
+        this.registerTypeSettings('date', { adapter: boc.DateAdapter });
         this.registerTypeSettings('money', {
             constr: boc.SimpleValue, adapter: boc.DecimalAdapter, decimals: 2
         });
