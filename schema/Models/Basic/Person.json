@@ -4,10 +4,21 @@
 	"type": "object",
 	"title": "Person",
 	"name": "Person",
-	"primaryKey" : "personId",
+	"primaryKey": "personId",
 	"properties": {
-		"personId" : { "type": "string", "format": "code"},		
-		"name": {"type": "string"},
-		"firstName": {"type": "string"}
+		"personId": {
+			"type": "string",
+			"format": "code"
+		},
+		"name": {
+			"type": "string"
+		},
+		"firstName": {
+			"type": "string"
+		},
+		"birthDate": {
+			"type": "string",
+			"format": "date"
+		}
 	}
 }
