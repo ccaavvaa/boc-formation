@@ -1,3 +1,4 @@
+// tslint:disable:max-line-length
 import * as boc from '@phoenix/boc';
 import { IObjectStore } from '@phoenix/boc-interfaces';
 import { Utils } from './tools/utils';

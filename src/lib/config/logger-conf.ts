@@ -6,6 +6,7 @@ import { stringify, LogLevel } from '@phoenix/logger';
 
 import { Utils } from '../tools/utils';
 import { IConfig } from '../interfaces';
+// tslint:disable:max-line-length
 
 const options: IConfig = Utils.getOptions();
 const level: LogLevel | 'none' = options.log && options.log.level ? options.log.level : 'error';

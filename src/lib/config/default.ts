@@ -1,4 +1,5 @@
 import { IConfig} from '../interfaces';
+// tslint:disable:max-line-length
 
 // Fichier de configuration par défaut de l'application
 export const defaultConfig: IConfig = {

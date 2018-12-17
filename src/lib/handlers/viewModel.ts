@@ -1,5 +1,6 @@
 import * as bocServer from '@phoenix/boc-server';
 import { m } from '@phoenix/service-route';
+// tslint:disable:max-line-length
 
 export class ViewModelHandler extends bocServer.ViewModelHandler {
     constructor() {

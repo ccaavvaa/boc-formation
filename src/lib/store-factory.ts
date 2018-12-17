@@ -19,7 +19,6 @@ export class ObjectStoreFactory implements boc.IObjectStoreFactory {
     }
     public async createObjectStore(
         session: boc.Session, dataDriverName: DataDriverName): Promise<IObjectStore> {
-
         const config = Utils.getConfig();
         const sessionOptions: IDataDriverOptions = _.cloneDeep(this.settings.dataDriverOptions);
         const sessionLogger = session.logger;
