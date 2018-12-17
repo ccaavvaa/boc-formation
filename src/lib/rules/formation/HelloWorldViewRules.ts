@@ -21,7 +21,8 @@ export class HelloWorldViewRules {
     })
     public static async calculateGreeting(target: HelloWorldView, msg: boc.Message) {
         let greetingElements: string[] = [target.title, target.name];
-        greetingElements = greetingElements.filter((s) => (typeof (s) === 'string') && s.length > 0);
+        greetingElements =
+            greetingElements.filter((s) => (typeof (s) === 'string') && s.length > 0);
         const greetingVariable = greetingElements.join(' ');
         const greeting = `Hello ${greetingVariable}`;
         await target.set_greeting(greeting);

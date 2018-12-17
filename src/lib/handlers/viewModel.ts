@@ -1,5 +1,6 @@
 import * as bocServer from '@phoenix/boc-server';
 import { m } from '@phoenix/service-route';
+// tslint:disable:max-line-length
 
 export class ViewModelHandler extends bocServer.ViewModelHandler {
     constructor() {
@@ -57,7 +58,8 @@ export class ViewModelHandler extends bocServer.ViewModelHandler {
         responses: {
             201: {
                 model: 'ViewModelInitResponse',
-                description: 'Description de la réponse : A savoir que l\'id reçu est l\id de container',
+                description:
+                    'Description de la réponse : A savoir que l\'id reçu est l\id de container',
             },
         },
     })
@@ -90,14 +92,16 @@ export class ViewModelHandler extends bocServer.ViewModelHandler {
             },
             {
                 name: 'body',
-                description: 'Données utilisées pour initialiser le viewModel, sous la forme de JSON Patchs',
+                description:
+                    'Données utilisées pour initialiser le viewModel, sous la forme de JSON Patchs',
                 model: 'ViewModelPatchs',
             },
         ],
         responses: {
             200: {
                 model: 'ViewModelPatchs',
-                description: 'Deltas des modifications à effectuer côté client, sous la forme de JSON Patchs',
+                description:
+                    'Deltas des modifications à effectuer côté client, sous la forme de JSON Patchs',
             },
         },
     })

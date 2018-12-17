@@ -25,7 +25,8 @@ export class Session extends boc.Session {
     public checkRequest(request: any) {
         const rt = SessionFactory.extractTenant(request);
         if (rt !== this.tenant) {
-            throw new ExtError(400, `Tenant from request ${rt} doesn't match session tenant ${this.tenant}`);
+            throw new ExtError(400,
+                `Tenant from request ${rt} doesn't match session tenant ${this.tenant}`);
         }
     }
     public update(request: any) {

@@ -3,7 +3,9 @@ import * as boc from '@phoenix/boc';
 import { IObjectStore, IDataDriverOptions } from '@phoenix/boc-interfaces';
 import { Session } from './session';
 import * as _ from 'lodash';
-import { MdrObjectStore, IMdrObjectStoreHandlers, StandardMdrVersionHandler } from '@phoenix/mdr-object-store';
+import {
+    MdrObjectStore, IMdrObjectStoreHandlers, StandardMdrVersionHandler
+} from '@phoenix/mdr-object-store';
 import { DataDriverName, DataDriverNames } from './interfaces';
 import { Utils } from './tools/utils';
 
@@ -15,7 +17,8 @@ export class ObjectStoreFactory implements boc.IObjectStoreFactory {
     constructor(settings: IObjectStoreFactorySettings) {
         this.settings = settings;
     }
-    public async createObjectStore(session: boc.Session, dataDriverName: DataDriverName): Promise<IObjectStore> {
+    public async createObjectStore(
+        session: boc.Session, dataDriverName: DataDriverName): Promise<IObjectStore> {
         const config = Utils.getConfig();
         const sessionOptions: IDataDriverOptions = _.cloneDeep(this.settings.dataDriverOptions);
         const sessionLogger = session.logger;

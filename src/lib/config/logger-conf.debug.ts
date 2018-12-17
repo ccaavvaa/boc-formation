@@ -1,3 +1,4 @@
+// tslint:disable:max-line-length
 import * as winston from 'winston';
 import * as Transport from 'winston-transport';
 import * as path from 'path';
