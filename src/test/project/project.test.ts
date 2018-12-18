@@ -55,7 +55,8 @@ describe('Project', function () {
             await project.members.link(projectMember);
             persons.push(person);
         }
-
+        const projectMembers = await project.members.toArray();
+        assert(projectMembers.length === 2);
         project.members.link(await c.createNew<ProjectMember>(ProjectMember));
         const m = await c.createNew<ProjectMember>(ProjectMember);
         await m.set_person(persons[0]);

@@ -58,5 +58,4 @@ export class PersonViewRules {
         const value = PersonRules.calculateFullName(personView.model);
         await personView.set_fullName(value);
     }
-
 }

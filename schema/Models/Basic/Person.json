@@ -34,7 +34,8 @@
 				"refManager"
 			],
 			"multiplicity": "one",
-			"inverseMultiplicity": "many"
+			"inverseMultiplicity": "many",
+			"inverseRel": "teamMembers"
 		},
 		"teamMembers": {
 			"foreignEntity": "Person",
@@ -42,8 +43,9 @@
 				"refManager"
 			],
 			"key": "id",
-			"multiplicity": "one",
-			"inverseMultiplicity": "many"
+			"multiplicity": "many",
+			"inverseMultiplicity": "one",
+			"inverseRel": "manager"
 		}
 	}
 }

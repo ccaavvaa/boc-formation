@@ -31,4 +31,25 @@ export class PersonRules {
             undefined;
         return fullName;
     }
+
+    @boc.Link({
+        constr: Person,
+        propName: 'teamMembers'
+    })
+    public static linkMember(target: Person, msg: boc.Message) {
+        const newMember = target.container.getInMemByRef<Person>(msg.data.opposite);
+        console.log(newMember.name);
+    }
+    @boc.RoleChange({
+        constr: Person,
+        propName: 'teamMembers',
+    })
+    public static roleChange(target: Person, msg: boc.Message) {
+       if(msg.kind === boc.MessageType.Link){
+           // add
+       } elseif(msg.kind === boc.MessageType.Unlink
+            // remove
+       }
+    }
+
 }
