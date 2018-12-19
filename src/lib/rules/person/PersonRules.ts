@@ -6,7 +6,13 @@ import { PersonExtension } from '../../views/person/PersonExtension';
 export const personNotEmptyProperties: Array<keyof Person & string> = [
     'personId', 'name', 'firstName', 'birthDate'];
 export class PersonRules {
-
+    public static initMetadata(m: boc.ModelMetadata) {
+        m.registerActions(Person, {
+            id: 'remove',
+            description: 'Supprimer',
+            title: 'Supprimer la personne',
+        });
+    }
     @boc.ObjectInit({
         constr: Person,
         description: 'Init extension',
@@ -79,5 +85,13 @@ export class PersonRules {
             return true;
         }
         return this.isManager(manager, m);
+    }
+
+    @boc.Action({
+        constr: Person,
+        actionId: 'remove'
+    })
+    public static async remove(target: Person, msg: boc.Message) {
+        await target.toDelete();
     }
 }

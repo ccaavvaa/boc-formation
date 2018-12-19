@@ -99,4 +99,17 @@ describe('PersonView', function () {
         assert(data.fullName === PersonRules.calculateFullName(person));
         assert(data.personKey === person.id);
     });
+    it('Execute action remove', async function () {
+        const c = createContainer();
+        const person = await c.createNew<Person>(Person);
+        const personAge = 5;
+        const birthDate = boc.NZDate.today().addYears(-personAge);
+        await person.set_birthDate(birthDate);
+        await person.set_name('N');
+        await person.set_firstName('F');
+        await person.set_personId('P1');
+        const view = await person.createViewModel<PersonView>(PersonView);
+        await view.executeAction('remove');
+        assert(person.isDeleted);
+    });
 });

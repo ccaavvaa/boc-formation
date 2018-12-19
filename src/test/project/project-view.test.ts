@@ -5,7 +5,6 @@ import '../debug-test';
 import { createContainer, applyPatch } from '../test-helpers';
 import { ProjectView } from '../../lib/views/project/ProjectView';
 import { Person } from '../../lib/models/Person';
-import { IJsonPatchOp, JsonPatchOperation } from '@phoenix/boc-interfaces';
 
 // tslint:disable:only-arrow-functions
 
@@ -48,6 +47,7 @@ async function createPersons(c: boc.Container): Promise<Person[]> {
         await p.set_personId(n);
         await p.set_name(n);
         await p.set_firstName(n);
+        await p.set_birthDate(boc.NZDate.today().addYears(-20 - i));
     }
     return persons;
 }

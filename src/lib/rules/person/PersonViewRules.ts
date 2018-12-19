@@ -4,6 +4,15 @@ import { PersonView } from '../../views/person/PersonView';
 import { PersonRules } from './PersonRules';
 
 export class PersonViewRules {
+    public static initMetadata(m: boc.ModelMetadata) {
+        m.registerActions(PersonView,
+            {
+                id: 'remove',
+                description: 'Supprimer la personne',
+                title: 'Supprimer',
+                saveAfter: true,
+            });
+    }
     @boc.ObjectInit({
         constr: PersonView,
         isNew: true,
@@ -22,6 +31,15 @@ export class PersonViewRules {
             if (model) {
                 await target.set_model(model);
             }
+        }
+    }
+    @boc.Action({
+        constr: PersonView,
+        actionId: 'remove',
+    })
+    public static async remove(target: PersonView, msg: boc.Message) {
+        if (target.model) {
+            await target.model.executeAction('remove');
         }
     }
 }
