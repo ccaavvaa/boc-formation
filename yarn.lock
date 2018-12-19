@@ -189,9 +189,9 @@
     winston-transport "^4.2.0"
 
 "@phoenix/mdr-object-store@^1.1.0":
-  version "1.1.5"
-  resolved "http://verdaccio/@phoenix%2fmdr-object-store/-/mdr-object-store-1.1.5.tgz#50313583cfbb77d2cb8c7a07e60dd7ee92f05cb5"
-  integrity sha512-tVOQA//TyqXQaxT3WxDbqiIjPcN0lWEF1Tkqiha+kN4iHEyrWA196U54wWMqc/gLCjVjLCQbVLXYsdXv4zx5zA==
+  version "1.1.6"
+  resolved "http://verdaccio/@phoenix%2fmdr-object-store/-/mdr-object-store-1.1.6.tgz#aba9bc656901f2e98175e795eb2172d66f5fb062"
+  integrity sha512-LOuPYr3wzM8KxWgeJDYFReL4oC8Q8sJvj4CMZPeHifYXgl4WNCWAIUwv1iULvGBRlneA67EE1diHeDOXlixZ9Q==
   dependencies:
     "@phoenix/boc-interfaces" "^1.1.0"
     "@phoenix/codata" "^1.1.0"
