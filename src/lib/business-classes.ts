@@ -9,6 +9,7 @@ import { ProjectView } from './views/project/ProjectView';
 import { ProjectMemberView } from './views/project/ProjectMemberView';
 import { TestFindRelation } from './views/find-relation/find-relation';
 import { PersonData } from './views/person/PersonData';
+import { PersonsView } from './views/person/PersonsView';
 
 export const businessClasses = [
     HelloWorldView,
@@ -16,6 +17,7 @@ export const businessClasses = [
     Person,
     PersonExtension,
     PersonView,
+    PersonsView,
     // Project
     Project,
     ProjectMember,

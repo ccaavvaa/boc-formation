@@ -12,7 +12,7 @@ const myTestToDebug = fs.existsSync(path.join(__dirname, 'my-debug-test.js')) ?
 // const testToDebug: string = 'Test_Resa get_all_pages';
 // const testToDebug: string = 'Test_Resa get_all_pages_save';
 
-const testToDebug: string = myTestToDebug || 'data 2 tiers';
+const testToDebug: string = myTestToDebug || null;
 
 beforeEach(function () {
     // tslint:disable-next-line:no-this-assignment
