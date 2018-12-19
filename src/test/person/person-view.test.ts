@@ -25,7 +25,7 @@ describe('PersonView', function () {
     it('create without model 2', async function () {
         const c = createContainer();
         const view = await c.createNew<PersonView>(PersonView, null, { notUsed: true });
-        assert(view && !view.model);
+        assert(view && view.model.objectState === boc.ObjectState.New);
     });
     it('create with model index', async function () {
         const c = createContainer();

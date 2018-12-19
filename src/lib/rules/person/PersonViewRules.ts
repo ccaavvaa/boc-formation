@@ -1,7 +1,6 @@
 import * as boc from '@phoenix/boc';
 import { Person } from '../../models/Person';
 import { PersonView } from '../../views/person/PersonView';
-import { PersonRules } from './PersonRules';
 
 export class PersonViewRules {
     public static initMetadata(m: boc.ModelMetadata) {
@@ -27,6 +26,10 @@ export class PersonViewRules {
                 model = c.getInMemByIndex<Person>(Person, msg.data.id);
             } else if (msg.data.personRef) {
                 model = c.getInMemByRef(msg.data.personRef);
+            }
+
+            if (!model) {
+                model = await c.createNew<Person>(Person);
             }
             if (model) {
                 await target.set_model(model);
