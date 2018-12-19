@@ -6,12 +6,14 @@ import { ProjectMemberRules } from './rules/project/ProjectMemberRules';
 import { PersonExtensionRules } from './rules/person/PersonExtensionRules';
 import { ProjectViewRules } from './rules/project/ProjectViewRules';
 import { ProjectMemberViewRules } from './rules/project/ProjectMemberViewRules';
+import { PersonsViewRules } from './rules/person/PersonsViewRules';
 export const businessRules = [
     HelloWorldViewRules,
     // Person
     PersonRules,
     PersonViewRules,
     PersonExtensionRules,
+    PersonsViewRules,
     // Project
     ProjectRules,
     ProjectMemberRules,

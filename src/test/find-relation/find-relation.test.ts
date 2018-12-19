@@ -3,7 +3,8 @@ import 'mocha';
 import { assert, expect } from 'chai';
 import '../debug-test';
 import { createContainer } from '../test-helpers';
-import { TestFindRelation, PersonData } from '../../lib/views/find-relation/find-relation';
+import { TestFindRelation } from '../../lib/views/find-relation/find-relation';
+import { PersonData } from '../../lib/views/person/PersonData';
 
 // tslint:disable:only-arrow-functions
 describe('FindRelation', function () {
