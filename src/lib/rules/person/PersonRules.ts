@@ -80,5 +80,4 @@ export class PersonRules {
         }
         return this.isManager(manager, m);
     }
-
 }

@@ -7,7 +7,6 @@ import { ProjectMember } from '../../lib/models/ProjectMember';
 import { projectMemberNotEmptyProperties } from '../../lib/rules/project/ProjectMemberRules';
 import { Person } from '../../lib/models/Person';
 import { Project } from '../../lib/models/Project';
-import { error } from 'util';
 import { PersonRules } from '../../lib/rules/person/PersonRules';
 
 // tslint:disable:only-arrow-functions
