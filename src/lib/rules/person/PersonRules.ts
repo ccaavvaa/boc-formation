@@ -86,4 +86,11 @@ export class PersonRules {
         }
         return this.isManager(manager, m);
     }
+    @boc.Action({
+        constr: Person,
+        actionId: 'remove',
+    })
+    public static async remove(target: Person, msg: boc.Message) {
+        await target.toDelete();
+    }
 }
