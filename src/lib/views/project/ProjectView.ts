@@ -15,12 +15,12 @@ import { ProjectMemberView } from './ProjectMemberView';
                 {
                     from: 'id',
                     to: 'projectId'
-                }
+                },
             ]
         }
     ],
     serializeDirectives: [
-        'members'
+        'members',
     ]
 })
 export class ProjectView extends boc.ViewModel<Project> {
