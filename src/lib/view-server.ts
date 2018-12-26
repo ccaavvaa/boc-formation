@@ -9,6 +9,7 @@ import * as path from 'path';
 
 import { businessClasses } from './business-classes';
 import { businessRules } from './business-rules';
+import { dataFactories } from './data-factories';
 
 export class Metadata extends boc.ModelMetadata {
     constructor(metadataName: string, classConstructors: any[], rules: any[]) {
@@ -44,7 +45,7 @@ export class Metadata extends boc.ModelMetadata {
         this.registerTypeSettings('notempty', { minLength: 1 });
         this.registerTypeSettings('memo', { maxLength: 4000 });
         this.registerTypeSettings('rate', {
-            constr: boc.SimpleValue, adapter: boc.DecimalAdapter, decimals: 3
+            constr: boc.SimpleValue, adapter: boc.DecimalAdapter, decimals: 2,
         });
         this.registerTypeSettings('boolean', {
             constr: boc.SimpleValue, adapter: boc.BooleanAdapter
@@ -108,12 +109,12 @@ export class ViewServer extends boc.Server {
                 objectStores.set(storeName, new ObjectStoreFactory(objectStoreFactoryOptions));
             }
         }
-
         super({
             objectStores,
             metadatas: [metadata],
             sessionFactory: new SessionFactory(),
             lockService: true,
+            dataFactories,
             logger,
         });
     }

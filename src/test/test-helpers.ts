@@ -6,8 +6,8 @@ import {
 import { JsonPatchOperation, IJsonPatchOp } from '@phoenix/boc-interfaces';
 import { ViewServer } from '../lib/view-server';
 
-const server = new ViewServer();
-const session = server.createSession('IDSESSION');
+export const server = new ViewServer();
+export const session = server.createSession('IDSESSION');
 export function createContainer() {
     const container = session.createContainerFor('Basic');
     return container;

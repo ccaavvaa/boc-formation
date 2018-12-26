@@ -150,9 +150,9 @@
     uuid "^3.3.2"
 
 "@phoenix/boc@^2.2.0":
-  version "2.2.3"
-  resolved "http://verdaccio/@phoenix%2fboc/-/boc-2.2.3.tgz#1a6cdb6ad3a315c643cd755f826bf6b52a91366a"
-  integrity sha512-t13p31ZEdyDLgMSYMVf4YuUtwMzZBEIzJsMJbh82VeMOrWHvRH+OZ/KwDDuO6VRGCfnsSeBVWWqWy3utczZtTA==
+  version "2.2.5"
+  resolved "http://verdaccio/@phoenix%2fboc/-/boc-2.2.5.tgz#143a9f7bfed55b5337fb089ac2c1a7a488604ef3"
+  integrity sha512-Obm6ojsSDxDz52WhmqeovzV6ZXsFRgEmAzF2vXPxaSPOnj/MC1AbivTlutj+RcHTAcLPeQH3DKd45UkyzY7NJA==
   dependencies:
     "@phoenix/boc-interfaces" "^1.1.0"
     "@phoenix/codata" "^1.1.1"
