@@ -150,9 +150,9 @@
     uuid "^3.3.2"
 
 "@phoenix/boc@^2.2.0":
-  version "2.2.5"
-  resolved "http://verdaccio/@phoenix%2fboc/-/boc-2.2.5.tgz#143a9f7bfed55b5337fb089ac2c1a7a488604ef3"
-  integrity sha512-Obm6ojsSDxDz52WhmqeovzV6ZXsFRgEmAzF2vXPxaSPOnj/MC1AbivTlutj+RcHTAcLPeQH3DKd45UkyzY7NJA==
+  version "2.2.6"
+  resolved "http://verdaccio/@phoenix%2fboc/-/boc-2.2.6.tgz#35b93d972b8f02109c9669de34daa672e1705cdb"
+  integrity sha512-gu0jDEXYYknlxQZbegRKGeFBhwZA5It/S3Tx5CUa3QYSgfRGkqEDBBtA75e6V3zGdBINFVIbZ+tPUhoE6bGuvw==
   dependencies:
     "@phoenix/boc-interfaces" "^1.1.0"
     "@phoenix/codata" "^1.1.1"
@@ -2159,10 +2159,17 @@ flush-write-stream@^1.0.2:
     inherits "^2.0.1"
     readable-stream "^2.0.4"
 
-follow-redirects@>=1.2.0, follow-redirects@^1.0.0:
+follow-redirects@>=1.2.0:
   version "1.5.10"
   resolved "http://verdaccio/follow-redirects/-/follow-redirects-1.5.10.tgz#7b7a9f9aea2fdff36786a94ff643ed07f4ff5e2a"
   integrity sha512-0V5l4Cizzvqt5D44aTXbFZz+FtyXV1vrDN6qrelxtfYQKW0KO0W2T/hkE8xvGa/540LkZlkaUjO4ailYTFtHVQ==
+  dependencies:
+    debug "=3.1.0"
+
+follow-redirects@^1.0.0:
+  version "1.6.0"
+  resolved "http://verdaccio/follow-redirects/-/follow-redirects-1.6.0.tgz#d12452c031e8c67eb6637d861bfc7a8090167933"
+  integrity sha512-4Oh4eI3S9OueVV41AgJ1oLjpaJUhbJ7JDGOMhe0AFqoSejl5Q2nn3eGglAzRUKVKZE8jG5MNn66TjCJMAnpsWA==
   dependencies:
     debug "=3.1.0"
 
