@@ -1,0 +1,38 @@
+{
+	"$schema": "http://phenix.salviadeveloppement.com/json-schema/mdr-schema.json",
+	"version": "1.0.0",
+	"type": "object",
+	"title": "PersonView",
+	"name": "PersonView",
+	"primaryKey": "id",
+    "model": "Person",
+    "isTransient": true,
+    "mappingDef": [
+        {
+            "from": "#model",
+            "mappings": [
+                "personId",
+                "name",
+                "firstName",
+                "birthDate",
+                {
+                    "from": "id",
+                    "to": "personKey"
+                },
+                {
+                    "from": "extension",
+                    "mappings": [
+                        "fullName",
+                        "age"
+                    ]
+                }
+            ]
+        }
+    ],
+
+	"properties": {
+		"id": {
+			"type": "integer"
+		}
+	}
+}

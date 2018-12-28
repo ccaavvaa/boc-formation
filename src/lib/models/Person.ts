@@ -111,6 +111,20 @@ export class Person extends boc.ModelObject {
         return this.setProp('birthDate', value);
     }
 
+    // read write property initials
+    @boc.PropertyInfo({
+        type: 'string',
+        title: 'Person',
+        isCalculated: true,
+    })
+    public get initials(): string {
+        return this.getProp('initials');
+    }
+
+    public set_initials(value: string): Promise<boc.IRuleExecutionResult[]> {
+        return this.setProp('initials', value);
+    }
+
     // relation teamMembers
     public teamMembers: boc.Many<Person, Person>;
 

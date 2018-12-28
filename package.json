@@ -21,7 +21,7 @@
         "test": "mocha ./test/**/*.test.js",
         "coverage": "nyc npm test",
         "start": "node index.js",
-        "entity": "bo-code-gen ./schema/Models ./src/lib/models -m Basic -n Basic -c ./schema/code-gen/bare.js",
+        "entity": "bo-code-gen ./schema/Models ./src/lib/models -m Basic -n Basic -c ./schema/code-gen/config.js",
         "view": "bo-code-gen ./schema/Views ./src/lib/views -n Memory",
         "updep": "yarn upgrade logger boc-interfaces boc boc-server mdr-object-store server-commons sql-data-driver"
     },
@@ -49,7 +49,7 @@
         "winston-transport": "^4.2.0"
     },
     "devDependencies": {
-        "@phoenix/bo-code-gen": "^0.3.0",
+        "@phoenix/bo-code-gen": "^2.0.0",
         "@phoenix/boc-prof": "^0.1.0",
         "@types/archiver": "^2.1.1",
         "@types/body-parser": "^1.16.7",
