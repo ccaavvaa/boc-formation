@@ -1,6 +1,6 @@
 export const config = {
-    name: 'AccessionRV Doc',
-    description: "Documentation de l'API AccessionRV",
+    name: 'Formation Doc',
+    description: "Documentation de l'API Formation",
     version: '1.0.0',
     licence: 'Salvia developpement',
     controllersBaseDir: 'lib/handlers',
@@ -35,6 +35,11 @@ export const config = {
             path: '/lookup/odata/{entity}',
             controller: 'LookUpHandler',
             file: 'lookup',
+        },
+        {
+            path: '/lookup/dataset/{datasetName}',
+            controller: 'DatasetHandler',
+            file: 'dataset',
         },
     ],
 };
