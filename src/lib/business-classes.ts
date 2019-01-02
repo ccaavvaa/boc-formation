@@ -6,6 +6,7 @@ import { ProjectMember } from './models/ProjectMember';
 import { Todo } from './models/Todo';
 import { PersonExtension } from './views/person/PersonExtension';
 import { ProjectView } from './views/project/ProjectView';
+import { LookupView } from './views/lookup/LookupView';
 import { ProjectMemberView } from './views/project/ProjectMemberView';
 import { TestFindRelation } from './views/find-relation/find-relation';
 import { PersonData } from './views/person/PersonData';
@@ -28,4 +29,6 @@ export const businessClasses = [
 
     TestFindRelation,
     PersonData,
+
+    LookupView,
 ];
