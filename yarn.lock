@@ -110,12 +110,11 @@
     through2 "^2.0.3"
 
 "@phoenix/bo-code-gen@^2.0.0":
-  version "2.0.0"
-  resolved "http://verdaccio/@phoenix%2fbo-code-gen/-/bo-code-gen-2.0.0.tgz#98d16e04fc9cfb9fbb1ce495baa48f8d76be4a15"
-  integrity sha512-Amm5gjRxCKxsU3mQX1eFkJs4TbCRyP4bhZztAxhf6yfhqLnmwlXQPaY1QQUUDjKXrTaewuw6xOgXl518d3hkeQ==
+  version "2.1.0"
+  resolved "http://verdaccio/@phoenix%2fbo-code-gen/-/bo-code-gen-2.1.0.tgz#e00e857ed1cbdde7e8aa1a1b6e205e987f10fc80"
+  integrity sha512-91ZiO9otxYDMCxnq7mDwDC+6Ww72Irc60L1T9Ny8V10hQlKR260MTk6JZQkpJbOC2zC2P63up7kxDXiimssVtA==
   dependencies:
     "@phoenix/schema" "^1.0.0"
-    async-file "^2.0.2"
     commander "^2.9.0"
     ejs "^2.5.5"
     javascript-stringify "^1.6.0"
@@ -151,9 +150,9 @@
     uuid "^3.3.2"
 
 "@phoenix/boc@^2.3.0":
-  version "2.3.1"
-  resolved "http://verdaccio/@phoenix%2fboc/-/boc-2.3.1.tgz#cd67d5f5102212cb8391be067d1bd6a5cb3ac47f"
-  integrity sha512-XR0itNO73CVRWVwZSoLguZWu5z3gR/0QU818MPExCwRAwYdxp3GZ/0V8nsRCBaxgXfXW6jIq3P4VIorVLoMXGg==
+  version "2.3.2"
+  resolved "http://verdaccio/@phoenix%2fboc/-/boc-2.3.2.tgz#956d11bc12024966ff427e71ca78ddf15c904bfd"
+  integrity sha512-IIDHwoyGG7j8EsByFnXfIM6I3/cjsPZKHL25Iava8ZyJDCUKn1iNkfPPvGXFbghd+qPEx3WKv3kgsho60g0vfw==
   dependencies:
     "@phoenix/boc-interfaces" "^1.1.0"
     "@phoenix/codata" "^1.1.1"
@@ -172,9 +171,9 @@
     uuid "^3.3.2"
 
 "@phoenix/codata@^1.1.0", "@phoenix/codata@^1.1.1":
-  version "1.1.3"
-  resolved "http://verdaccio/@phoenix%2fcodata/-/codata-1.1.3.tgz#a1ff592cc200fddda0286909dcda0187e0c4346a"
-  integrity sha512-HKlmMpZsJa7msC/3+uZB5hQZNDRlZf2soVZog7rDUl63lHmCud7I4qqaZ5HF9PxgI51fus3eeQBz/0caQ9vEBg==
+  version "1.1.5"
+  resolved "http://verdaccio/@phoenix%2fcodata/-/codata-1.1.5.tgz#532c79e8011ed6a5a8ea65bb19d55bd16d277fdf"
+  integrity sha512-tt71+NCxba5mL/5Al7MTxaBiEg+5MejLP9IQoAb2OAUQwdlTaCDB3No1S9r15Kf4KBf1Ssppii1Im6GSAgxk2w==
 
 "@phoenix/logger@^2.0.0":
   version "2.1.0"
@@ -244,9 +243,9 @@
     underscore "*"
 
 "@phoenix/sql-data-driver@^1.1.0":
-  version "1.1.13"
-  resolved "http://verdaccio/@phoenix%2fsql-data-driver/-/sql-data-driver-1.1.13.tgz#01fc5b131a731d8683fc87d0fb0d47597b7706e6"
-  integrity sha512-BPNruDCwbQVJUIvxuhHTUPGpPUpiTEIHTtREJYzvzUUjg0ijSs37VUYXdKrfpFpfrNAsOgDD3eyP9xQXupHKVA==
+  version "1.1.14"
+  resolved "http://verdaccio/@phoenix%2fsql-data-driver/-/sql-data-driver-1.1.14.tgz#2d5df6a7df193e222c71e460ddffa24eb4804e5f"
+  integrity sha512-GKhv3l+uEt3uG+bSX+7FUIcBIz7bjRZz/YQO6APrQuTrfD7RbyDrxc/7CFTptAWfPq3BjeGU1TeCJkPNJ+htMQ==
   dependencies:
     "@phoenix/boc-interfaces" "^1.1.0"
     "@phoenix/logger" "^2.0.0"
@@ -747,13 +746,6 @@ async-each@^1.0.0:
   version "1.0.1"
   resolved "http://verdaccio/async-each/-/async-each-1.0.1.tgz#19d386a1d9edc6e7c1c85d388aedbcc56d33602d"
   integrity sha1-GdOGodntxufByF04iu28xW0zYC0=
-
-async-file@^2.0.2:
-  version "2.0.2"
-  resolved "http://verdaccio/async-file/-/async-file-2.0.2.tgz#02ad07856ac3717e836b20aec5a4cfe00c46df23"
-  integrity sha1-Aq0HhWrDcX6DayCuxaTP4AxG3yM=
-  dependencies:
-    rimraf "^2.5.2"
 
 async-settle@^1.0.0:
   version "1.0.0"
@@ -2161,9 +2153,9 @@ flush-write-stream@^1.0.2:
     readable-stream "^2.0.4"
 
 follow-redirects@>=1.2.0, follow-redirects@^1.0.0:
-  version "1.6.0"
-  resolved "http://verdaccio/follow-redirects/-/follow-redirects-1.6.0.tgz#d12452c031e8c67eb6637d861bfc7a8090167933"
-  integrity sha512-4Oh4eI3S9OueVV41AgJ1oLjpaJUhbJ7JDGOMhe0AFqoSejl5Q2nn3eGglAzRUKVKZE8jG5MNn66TjCJMAnpsWA==
+  version "1.6.1"
+  resolved "http://verdaccio/follow-redirects/-/follow-redirects-1.6.1.tgz#514973c44b5757368bad8bddfe52f81f015c94cb"
+  integrity sha512-t2JCjbzxQpWvbhts3l6SH1DKzSrx8a+SsaVf4h6bG4kOXUuPYS/kg2Lr4gQSb7eemaHqJkOThF1BGyjlUkO1GQ==
   dependencies:
     debug "=3.1.0"
 
@@ -2450,7 +2442,7 @@ glob@^5.0.3:
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
-glob@^7.0.0, glob@^7.0.3, glob@^7.0.5, glob@^7.1.1, glob@^7.1.3:
+glob@^7.0.0, glob@^7.0.3, glob@^7.1.1, glob@^7.1.3:
   version "7.1.3"
   resolved "http://verdaccio/glob/-/glob-7.1.3.tgz#3960832d3f1574108342dafd3a67b332c0969df1"
   integrity sha512-vcfuiIxogLV4DlGBHIUOwI0IbrJ8HWPc4MU7HzviGeNho/UJDfi6B5p3sHeWIQ0KGIU0Jpxi5ZHxemQfLkkAwQ==
@@ -4918,12 +4910,12 @@ ret@~0.1.10:
   resolved "http://verdaccio/ret/-/ret-0.1.15.tgz#b8a4825d5bdb1fc3f6f53c2bc33f81388681c7bc"
   integrity sha512-TTlYpa+OL+vMMNG24xSlQGEJ3B/RzEfUlLct7b5G/ytav+wPrplCpVMFuwzXbkecJrb6IYo1iFb0S9v37754mg==
 
-rimraf@^2.2.8, rimraf@^2.5.2, rimraf@^2.6.1, rimraf@^2.6.2:
-  version "2.6.2"
-  resolved "http://verdaccio/rimraf/-/rimraf-2.6.2.tgz#2ed8150d24a16ea8651e6d6ef0f47c4158ce7a36"
-  integrity sha512-lreewLK/BlghmxtfH36YYVg1i8IAce4TI7oao75I1g245+6BctqTVQiBP3YUJ9C6DQOXJmkYR9X9fCLtCOJc5w==
+rimraf@^2.2.8, rimraf@^2.6.1, rimraf@^2.6.2:
+  version "2.6.3"
+  resolved "http://verdaccio/rimraf/-/rimraf-2.6.3.tgz#b2d104fe0d8fb27cf9e0a1cda8262dd3833c6cab"
+  integrity sha512-mwqeW5XsA2qAejG46gYdENaxXjx9onRNCfn7L0duuP4hCuTIi/QO7PDK07KJfp1d+izWPrzEJDcSqBa0OZQriA==
   dependencies:
-    glob "^7.0.5"
+    glob "^7.1.3"
 
 safe-buffer@5.1.2, safe-buffer@^5.1.0, safe-buffer@^5.1.1, safe-buffer@^5.1.2, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   version "5.1.2"
