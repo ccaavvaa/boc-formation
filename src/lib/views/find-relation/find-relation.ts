@@ -9,17 +9,8 @@ import { Person } from '../../models/Person';
 export class TestFindRelation extends boc.BaseViewModel {
     public static defineRoles(): boc.IRoleDeclaration[] {
         const settings: boc.IFindRelationSettings<TestFindRelation, PersonData> = {
-            dataListSettings: {
-                autoDestroyInstances: true,
-                newObjects: true,
-            },
-            findClass: Person,
-            findPageSize: 5,
             roleProp: 'persons',
             oppositeConstr: PersonData,
-            findOptions: {
-                count: true,
-            }
         };
         return [
             {

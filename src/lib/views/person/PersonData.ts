@@ -3,8 +3,13 @@ import { Person } from '../../models/Person';
 
 @boc.ClsInfo({
     title: 'Person Data View',
+    findClass: Person,
+    findPageSize: 5,
+    findOptions: {
+        count: true,
+    }
 })
-export class PersonData extends boc.BaseViewModel {
+export class PersonData extends boc.FindView {
     // read only property id
     @boc.PropertyInfo({
         jsFormats: ['integer'],
