@@ -1,0 +1,20 @@
+{
+	"$schema": "http://phenix.salviadeveloppement.com/json-schema/mdr-schema.json",
+	"version": "1.0.0",
+	"type": "object",
+	"title": "PersonExtension",
+    "name": "PersonExtension",
+    "model": "Person",
+	"primaryKey": "id",
+    "theme": "person",
+    "isTransient": true,
+    "properties": {
+        "fullName":{
+            "type": "string",
+            "title": "Full Name"
+        },
+        "age": {
+            "type":"integer"
+        }
+    }
+}

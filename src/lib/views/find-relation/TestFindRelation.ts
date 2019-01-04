@@ -1,16 +1,12 @@
 /* tslint:disable */
 import * as boc from '@phoenix/boc';
-import { PersonData } from './PersonData';
+import { PersonData } from '../person/PersonData';
 @boc.ClsInfo({
-    title: 'PersonsView',
+    title: 'TestFindRelation',
     primaryKey: ['id'],
-    businessKey: ['id'],
     isTransient: true,
-    serializeDirectives: [
-        'persons',
-    ],
 })
-export class PersonsView extends boc.BaseViewModel {
+export class TestFindRelation extends boc.BaseViewModel {
     public static defineRoles(): boc.IRoleDeclaration[] {
         return [
             // relation persons
@@ -28,12 +24,12 @@ export class PersonsView extends boc.BaseViewModel {
     @boc.PropertyInfo({
         jsFormats: ['integer'],
         type: 'integer',
-        title: 'PersonsView',
+        title: 'TestFindRelation',
     })
     public get id(): number {
         return this.getProp('id');
     }
 
     // relation persons
-    public persons: boc.FindRelation<PersonsView, PersonData>;
+    public persons: boc.FindRelation<TestFindRelation, PersonData>;
 }

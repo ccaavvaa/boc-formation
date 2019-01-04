@@ -1,0 +1,15 @@
+{
+	"$schema": "http://phenix.salviadeveloppement.com/json-schema/mdr-schema.json",
+	"version": "1.0.0",
+    "type": "object",
+    "name": "LookupView",
+    "theme": "lookup",
+    "isTransient": true,
+    "title": "Lookup View",
+    "properties": {
+        "personId": {
+            "type": "string",
+            "title": "Person ID"
+        }
+    }
+}

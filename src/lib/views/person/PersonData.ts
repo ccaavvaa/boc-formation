@@ -1,20 +1,26 @@
+/* tslint:disable */
 import * as boc from '@phoenix/boc';
-import { Person } from '../../models/Person';
-
 @boc.ClsInfo({
     title: 'Person Data View',
-    findClass: Person,
+    primaryKey: ['id'],
+    isTransient: true,
+    findClass: 'Person',
     findPageSize: 5,
     findOptions: {
         count: true,
-    }
+    },
 })
 export class PersonData extends boc.FindView {
+    public static defineRoles(): boc.IRoleDeclaration[] {
+        return [
+        ];
+    }
+
     // read only property id
     @boc.PropertyInfo({
         jsFormats: ['integer'],
         type: 'integer',
-        title: 'Person',
+        title: 'Person Data View',
     })
     public get id(): number {
         return this.getProp('id');
@@ -25,7 +31,7 @@ export class PersonData extends boc.FindView {
         jsFormats: ['code'],
         type: 'string',
         format: 'code',
-        title: 'Person',
+        title: 'Person Data View',
     })
     public get personId(): string {
         return this.getProp('personId');
@@ -38,7 +44,7 @@ export class PersonData extends boc.FindView {
     // read write property name
     @boc.PropertyInfo({
         type: 'string',
-        title: 'Person',
+        title: 'Person Data View',
     })
     public get name(): string {
         return this.getProp('name');
@@ -51,7 +57,7 @@ export class PersonData extends boc.FindView {
     // read write property firstName
     @boc.PropertyInfo({
         type: 'string',
-        title: 'Person',
+        title: 'Person Data View',
     })
     public get firstName(): string {
         return this.getProp('firstName');
@@ -66,7 +72,7 @@ export class PersonData extends boc.FindView {
         jsFormats: ['date'],
         type: 'string',
         format: 'date',
-        title: 'Person',
+        title: 'Person Data View',
     })
     public get birthDate(): boc.NZDate {
         return this.getProp('birthDate');

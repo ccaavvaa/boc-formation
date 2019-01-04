@@ -1,4 +1,4 @@
-import { HelloWorldView } from './views/formation/hello-world';
+import { HelloWorldView } from './views/formation/HelloWorldView';
 import { Person } from './models/Person';
 import { PersonView } from './views/person/PersonView';
 import { Project } from './models/Project';
@@ -8,7 +8,7 @@ import { PersonExtension } from './views/person/PersonExtension';
 import { ProjectView } from './views/project/ProjectView';
 import { LookupView } from './views/lookup/LookupView';
 import { ProjectMemberView } from './views/project/ProjectMemberView';
-import { TestFindRelation } from './views/find-relation/find-relation';
+import { TestFindRelation } from './views/find-relation/TestFindRelation';
 import { PersonData } from './views/person/PersonData';
 import { PersonsView } from './views/person/PersonsView';
 

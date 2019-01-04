@@ -1,20 +1,30 @@
+/* tslint:disable */
 import * as boc from '@phoenix/boc';
-
 @boc.ClsInfo({
     title: 'Hello World',
-    description: 'Hello World View Model',
+    primaryKey: ['id'],
     isTransient: true,
 })
 export class HelloWorldView extends boc.BaseViewModel {
     public static defineRoles(): boc.IRoleDeclaration[] {
         return [
-            // hello world roles
         ];
     }
+
+    // read only property id
     @boc.PropertyInfo({
-        title: 'Nom',
-        description: 'Nom',
+        jsFormats: ['integer'],
+        type: 'integer',
+        title: 'Hello World',
+    })
+    public get id(): number {
+        return this.getProp('id');
+    }
+
+    // read write property name
+    @boc.PropertyInfo({
         type: 'string',
+        title: 'Name',
     })
     public get name(): string {
         return this.getProp('name');
@@ -24,10 +34,10 @@ export class HelloWorldView extends boc.BaseViewModel {
         return this.setProp('name', value);
     }
 
+    // read write property title
     @boc.PropertyInfo({
-        title: 'Title',
-        description: 'Title',
         type: 'string',
+        title: 'Title',
     })
     public get title(): string {
         return this.getProp('title');
@@ -37,10 +47,10 @@ export class HelloWorldView extends boc.BaseViewModel {
         return this.setProp('title', value);
     }
 
+    // read write property greeting
     @boc.PropertyInfo({
-        title: 'Greeting',
-        description: 'Greeting',
         type: 'string',
+        title: 'Greeting',
     })
     public get greeting(): string {
         return this.getProp('greeting');

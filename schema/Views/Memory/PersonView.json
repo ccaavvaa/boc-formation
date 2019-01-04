@@ -6,6 +6,7 @@
 	"name": "PersonView",
 	"primaryKey": "id",
     "model": "Person",
+    "theme": "person",
     "isTransient": true,
     "mappingDef": [
         {
@@ -28,11 +29,5 @@
                 }
             ]
         }
-    ],
-
-	"properties": {
-		"id": {
-			"type": "integer"
-		}
-	}
+    ]
 }

@@ -2,7 +2,7 @@ import 'mocha';
 import * as chai from 'chai';
 import '../debug-test';
 import { ViewServer } from '../../lib/view-server';
-import { HelloWorldView } from '../../lib/views/formation/hello-world';
+import { HelloWorldView } from '../../lib/views/formation/HelloWorldView';
 // tslint:disable:only-arrow-functions
 
 // const expect = chai.expect;

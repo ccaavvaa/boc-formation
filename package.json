@@ -22,7 +22,7 @@
         "coverage": "nyc npm test",
         "start": "node index.js",
         "entity": "bo-code-gen ./schema/Models ./src/lib/models -m Basic -n Basic -c ./schema/code-gen/config.js",
-        "view": "bo-code-gen ./schema/Views ./src/lib/views -n Memory",
+        "view": "bo-code-gen ./schema/Views ./src/lib/views -n Memory -i ../models",
         "updep": "yarn upgrade logger boc-interfaces boc boc-server mdr-object-store server-commons sql-data-driver"
     },
     "dependencies": {

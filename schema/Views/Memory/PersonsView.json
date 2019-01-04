@@ -1,0 +1,17 @@
+{
+	"$schema": "http://phenix.salviadeveloppement.com/json-schema/mdr-schema.json",
+	"version": "1.0.0",
+	"type": "object",
+	"title": "PersonsView",
+	"name": "PersonsView",
+	"primaryKey": "id",
+    "theme": "person",
+    "isTransient": true,
+    "serializeDirectives": ["persons"],
+    "relations": {
+        "persons": {
+            "foreignEntity": "PersonData",
+            "multiplicity": "many"            
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "$schema": "http://phenix.salviadeveloppement.com/json-schema/mdr-schema.json",
+    "version": "1.0.0",
+    "type": "object",
+    "name": "HelloWorldView",
+    "title": "Hello World",
+    "theme": "formation",
+    "isTransient": true,
+    "properties": {
+        "name": {
+            "type": "string",
+            "title": "Name"
+        },
+        "title": {
+            "type":"string",
+            "title":"Title"
+        },
+        "greeting": {
+            "type":"string",
+            "title": "Greeting"
+        }
+    }
+}

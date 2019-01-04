@@ -110,9 +110,9 @@
     through2 "^2.0.3"
 
 "@phoenix/bo-code-gen@^2.0.0":
-  version "2.1.0"
-  resolved "http://verdaccio/@phoenix%2fbo-code-gen/-/bo-code-gen-2.1.0.tgz#e00e857ed1cbdde7e8aa1a1b6e205e987f10fc80"
-  integrity sha512-91ZiO9otxYDMCxnq7mDwDC+6Ww72Irc60L1T9Ny8V10hQlKR260MTk6JZQkpJbOC2zC2P63up7kxDXiimssVtA==
+  version "2.1.1"
+  resolved "http://verdaccio/@phoenix%2fbo-code-gen/-/bo-code-gen-2.1.1.tgz#82548dace4fc9691ca2d306fe1f4cf2af08d8d00"
+  integrity sha512-9xKfQc6bA/mKmKrWrmwavij9Ms7SSgpR/v5uZMLYxu0kxYIUpFB0qO2da4fFQqYc3mBGC2KlxPbBFoMPjtfndQ==
   dependencies:
     "@phoenix/schema" "^1.0.0"
     commander "^2.9.0"
@@ -208,9 +208,9 @@
     "@phoenix/schema" "^1.0.0"
 
 "@phoenix/schema@^1.0.0":
-  version "1.1.1"
-  resolved "http://verdaccio/@phoenix%2fschema/-/schema-1.1.1.tgz#997381d72320842b31d62344b8ff9b9e76cd1094"
-  integrity sha512-QtbziHdl7sW4cJahuH5jeoVYsJrjyWKVAVnFiC5MD8jj8ZJwQDT7jT1Dao+h5kniL7I/mX5lYOU3E2MkE5J5kQ==
+  version "1.1.3"
+  resolved "http://verdaccio/@phoenix%2fschema/-/schema-1.1.3.tgz#f2652e1733fa349e6bc7aaf68de811e80809dc46"
+  integrity sha512-rOcy/xzFgqI/IQfTYjXH0EmkCvPggODZk5g+eUJ3LpK2pCXD1mJUsPXto5sqdqiggjP6iUxmMcRvqpRzRy+YTg==
   dependencies:
     argparse "^1.0.10"
 

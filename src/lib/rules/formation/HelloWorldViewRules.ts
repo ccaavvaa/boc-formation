@@ -1,5 +1,5 @@
 import * as boc from '@phoenix/boc';
-import { HelloWorldView } from '../../views/formation/hello-world';
+import { HelloWorldView } from '../../views/formation/HelloWorldView';
 export class HelloWorldViewRules {
     @boc.ObjectInit({
         constr: HelloWorldView,

@@ -1,9 +1,12 @@
+/* tslint:disable */
 import * as boc from '@phoenix/boc';
 import { Person } from '../../models/Person';
 @boc.ClsInfo({
-    description: 'Person View',
-    isTransient: true,
+    title: 'PersonView',
+    primaryKey: ['id'],
+    businessKey: ['id'],
     modelConstr: Person,
+    isTransient: true,
     mappingDef: [
         {
             from: '#model',
@@ -28,4 +31,18 @@ import { Person } from '../../models/Person';
     ],
 })
 export class PersonView extends boc.ViewModel<Person> {
+    public static defineRoles(): boc.IRoleDeclaration[] {
+        return [
+        ];
+    }
+
+    // read only property id
+    @boc.PropertyInfo({
+        jsFormats: ['integer'],
+        type: 'integer',
+        title: 'PersonView',
+    })
+    public get id(): number {
+        return this.getProp('id');
+    }
 }

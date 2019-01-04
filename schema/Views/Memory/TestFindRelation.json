@@ -1,0 +1,15 @@
+{
+    "$schema": "http://phenix.salviadeveloppement.com/json-schema/mdr-schema.json",
+    "version": "1.0.0",
+    "type": "object",
+    "name": "TestFindRelation",
+    "title": "TestFindRelation",
+    "theme": "find-relation",
+    "isTransient": true,
+    "relations": {
+        "persons": {
+            "multiplicity": "many",
+            "foreignEntity": "PersonData"
+        }
+    }
+}
