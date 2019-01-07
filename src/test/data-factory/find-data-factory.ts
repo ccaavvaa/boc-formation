@@ -29,12 +29,14 @@ describe('ObjectDataFactory', function () {
         let result: FindResult;
         result = await session.getDataset({
             datasetName: 'personData',
+            pageSize: 1,
         });
         expect(result.count).equals(2);
         expect(result.value.length).equals(1);
         result = await session.getDataset({
             datasetName: 'personData',
             pageNumber: 2,
+            pageSize: 1,
         });
         expect(result.count).equals(2);
         expect(result.value.length).equals(1);
