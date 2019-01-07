@@ -32,7 +32,8 @@ describe('DataList', function () {
     });
     it('find', async function () {
         const c = createContainer();
-        const dl = new boc.FindDataList<PersonData>(c, PersonData, 5, Person, {
+        const dl = new boc.FindDataList<PersonData>(c, PersonData, Person, {
+            limit: 5,
             count: true,
             select: ['personId', 'firstName', 'name'],
         }, {

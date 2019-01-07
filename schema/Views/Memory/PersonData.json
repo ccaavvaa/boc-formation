@@ -7,9 +7,9 @@
     "isTransient": true,
     "title": "Person Data View",
     "findClass": "Person",
-    "findPageSize": 5,
     "findOptions": {
-        "count": true
+		"count": true,
+		"limit": 5
     },
     "properties":{
 		"personId": {

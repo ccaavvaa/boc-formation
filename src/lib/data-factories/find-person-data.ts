@@ -8,10 +8,10 @@ const findPersonDataFactorySettings: boc.FindDataFactorySettings = {
         count: true,
         sort: 'name asc, firstName asc',
         select: ['firstName', 'name'],
+        limit: 5,
     },
     metadataName: 'Basic',
-    objectStoreName: DataDriverNames.Basic,
-    pageSize: 5,
+    objectStoreName: DataDriverNames.Basic
 };
 
 export const findPersonDataFactory = new boc.FindDataFactory(findPersonDataFactorySettings);

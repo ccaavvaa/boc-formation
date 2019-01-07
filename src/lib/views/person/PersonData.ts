@@ -5,9 +5,9 @@ import * as boc from '@phoenix/boc';
     primaryKey: ['id'],
     isTransient: true,
     findClass: 'Person',
-    findPageSize: 5,
     findOptions: {
         count: true,
+        limit: 5,
     },
 })
 export class PersonData extends boc.FindView {

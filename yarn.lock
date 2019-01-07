@@ -110,9 +110,9 @@
     through2 "^2.0.3"
 
 "@phoenix/bo-code-gen@^2.0.0":
-  version "2.1.1"
-  resolved "http://verdaccio/@phoenix%2fbo-code-gen/-/bo-code-gen-2.1.1.tgz#82548dace4fc9691ca2d306fe1f4cf2af08d8d00"
-  integrity sha512-9xKfQc6bA/mKmKrWrmwavij9Ms7SSgpR/v5uZMLYxu0kxYIUpFB0qO2da4fFQqYc3mBGC2KlxPbBFoMPjtfndQ==
+  version "2.2.0"
+  resolved "http://verdaccio/@phoenix%2fbo-code-gen/-/bo-code-gen-2.2.0.tgz#17e5fc96d167b5e0d827da1dbeac19b3391b5c44"
+  integrity sha512-J5KYLc5a4Wjd6d90doP9hqylvQzCkm/LT2eDsJjU8qtQIcyeX1VgfuwF3mD/cMp4NMwou29REDW5+6W9zuK0Ag==
   dependencies:
     "@phoenix/schema" "^1.0.0"
     commander "^2.9.0"
@@ -134,11 +134,11 @@
   integrity sha512-Y/YCKV2zN+DCVePKSzk2uTc6Flw93ntJaZ7Bb1bAsP/xAEA6o0Wrh0SHf7v4KypPV0iL308utxzA4lyWdJsuMQ==
 
 "@phoenix/boc-server@^2.2.0":
-  version "2.2.1"
-  resolved "http://verdaccio/@phoenix%2fboc-server/-/boc-server-2.2.1.tgz#db2c78efb5a2975a71f336bb23d98fb597fe56f0"
-  integrity sha512-Mnqr5ae+PaDS/MxatSQuWo81YXsrsFRBDMcfKHpAKou1yyftsm4DS58EnkYNmEOU7lNzYy2YMUIYzG9NrtUqqA==
+  version "2.2.2"
+  resolved "http://verdaccio/@phoenix%2fboc-server/-/boc-server-2.2.2.tgz#ef7266110db5362b0467e1811b8e36e71a91adc6"
+  integrity sha512-SygUUElmbDKiUfyQZCbUL6sXEHW5B4Vq86cZ6W12YFaIFkmyq1eUPyPR3nQp8oqJ9CfCSvit5zUaVJRjDd4rDg==
   dependencies:
-    "@phoenix/boc" "^2.3.0"
+    "@phoenix/boc" "^2.5.0"
     "@phoenix/boc-interfaces" "^1.1.0"
     "@phoenix/server-commons" "^1.0.0"
     "@phoenix/service-route" "^1.0.1"
@@ -149,10 +149,10 @@
     lodash "^4.17.4"
     uuid "^3.3.2"
 
-"@phoenix/boc@^2.3.0", "@phoenix/boc@^2.4.0":
-  version "2.4.0"
-  resolved "http://verdaccio/@phoenix%2fboc/-/boc-2.4.0.tgz#c61497031b1fbefa3808460ce4871d87ae281457"
-  integrity sha512-j/NcWxpfgze3iDCFtjmLoh/yGHDR24sgvVLq1T383LwCTFYcyvK4dMi5FRKWAOFa9zDWzbedB8rUQtQ/925Cvw==
+"@phoenix/boc@^2.5.0":
+  version "2.5.1"
+  resolved "http://verdaccio/@phoenix%2fboc/-/boc-2.5.1.tgz#ec39c2a4ac68acbdb589549f5856eaf87dcc0c36"
+  integrity sha512-B1ldIkmhsfIS+Hi/FYcVviCbt5bDn/75KKRieSosuPYkoO4XtIIVkOhVLcxQyNQxF59qzJHNHOcE/NOV1AMV8w==
   dependencies:
     "@phoenix/boc-interfaces" "^1.1.0"
     "@phoenix/codata" "^1.1.1"
@@ -424,9 +424,9 @@
     "@types/mime" "*"
 
 "@types/superagent@*":
-  version "3.8.5"
-  resolved "http://verdaccio/@types%2fsuperagent/-/superagent-3.8.5.tgz#a8eb8ec5bce0234e50d6b8bee1941b5bb5686e2d"
-  integrity sha512-h7dQyzEGQFY3Ya8pIu0fxcWaMWC2DDSKR78gHrh6GVnXUqXo/+93wd4RObXA13rKp4ETyym3yq2A0AxROx9AxQ==
+  version "3.8.6"
+  resolved "http://verdaccio/@types%2fsuperagent/-/superagent-3.8.6.tgz#3676d8920d8979ea4ca57513f27995064f92dc43"
+  integrity sha512-YQjdsk27MLb6uyXjjywGyYeuqavwV3CirHt6btBz00HkKJyowdB8gjjB1zIZxrOybDRqO8FLjTZeEtmtC2hqxA==
   dependencies:
     "@types/cookiejar" "*"
     "@types/node" "*"
@@ -1062,9 +1062,9 @@ chalk@^1.0.0, chalk@^1.1.3:
     supports-color "^2.0.0"
 
 chalk@^2.0.0, chalk@^2.3.0:
-  version "2.4.1"
-  resolved "http://verdaccio/chalk/-/chalk-2.4.1.tgz#18c49ab16a037b6eb0152cc83e3471338215b66e"
-  integrity sha512-ObN6h1v2fTJSmUXoS3nMQ92LbDK9be4TV+6G+omQlGJFdcUX5heKi1LZ1YnRMIgwTLEj3E24bT6tYni50rlCfQ==
+  version "2.4.2"
+  resolved "http://verdaccio/chalk/-/chalk-2.4.2.tgz#cd42541677a54333cf541a49108c1432b44c9424"
+  integrity sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==
   dependencies:
     ansi-styles "^3.2.1"
     escape-string-regexp "^1.0.5"
@@ -3280,9 +3280,9 @@ js-tokens@^4.0.0:
   integrity sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==
 
 js-yaml@^3.7.0:
-  version "3.12.0"
-  resolved "http://verdaccio/js-yaml/-/js-yaml-3.12.0.tgz#eaed656ec8344f10f527c6bfa1b6e2244de167d1"
-  integrity sha512-PIt2cnwmPfL4hKNwqeiuz4bKfnzHTBv6HyVgjahA6mPLwPDzjDWrplJBMjHUFxku/N3FlmrbyPclad+I+4mJ3A==
+  version "3.12.1"
+  resolved "http://verdaccio/js-yaml/-/js-yaml-3.12.1.tgz#295c8632a18a23e054cf5c9d3cecafe678167600"
+  integrity sha512-um46hB9wNOKlwkHgiuyEVAybXBjwFUV0Z/RaHJblRd9DXltue9FTYvzCr9ErQrK9Adz5MU4gHWVaNUfdmrC8qA==
   dependencies:
     argparse "^1.0.7"
     esprima "^4.0.0"
@@ -4095,9 +4095,9 @@ npm-bundled@^1.0.1:
   integrity sha512-m/e6jgWu8/v5niCUKQi9qQl8QdeEduFA96xHDDzFGqly0OOjI7c+60KM/2sppfnUU9JJagf+zs+yGhqSOFj71g==
 
 npm-packlist@^1.1.6:
-  version "1.1.12"
-  resolved "http://verdaccio/npm-packlist/-/npm-packlist-1.1.12.tgz#22bde2ebc12e72ca482abd67afc51eb49377243a"
-  integrity sha512-WJKFOVMeAlsU/pjXuqVdzU0WfgtIBCupkEVwn+1Y0ERAbUfWw8R4GjgVbaKnUjRoD2FoQbHOCbOyT5Mbs9Lw4g==
+  version "1.2.0"
+  resolved "http://verdaccio/npm-packlist/-/npm-packlist-1.2.0.tgz#55a60e793e272f00862c7089274439a4cc31fc7f"
+  integrity sha512-7Mni4Z8Xkx0/oegoqlcao/JpPCPEMtUvsmB0q7mgvlMinykJLSRTYuFqoQLYgGY8biuxIeiHO+QNJKbCfljewQ==
   dependencies:
     ignore-walk "^3.0.1"
     npm-bundled "^1.0.1"

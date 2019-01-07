@@ -8,6 +8,7 @@ const objectDataFactorySettings: boc.ObjectDataFactorySettings = {
     findClass: Person,
     findOptions: {
         count: true,
+        limit: 1,
         filter: {
             $and: [
                 { firstname: 'John' }
@@ -17,7 +18,6 @@ const objectDataFactorySettings: boc.ObjectDataFactorySettings = {
     },
     metadataName: 'Basic',
     newObjects: true,
-    pageSize: 1,
 };
 export const personsDataFactory =
     new boc.ObjectDataFactory<PersonData>(PersonData, objectDataFactorySettings);
