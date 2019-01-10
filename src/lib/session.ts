@@ -75,10 +75,18 @@ export class SessionFactory implements boc.ISessionFactory {
         const tenant: string = request && request.tenant ? request.tenant : null;
         return tenant;
     }
-    public createSession(server: boc.Server, idSession: string, request?: any): boc.Session {
+    public createSessionForRequest(
+        server: boc.Server, idSession: string, request?: any): boc.Session {
+
         const tenant = SessionFactory.extractTenant(request);
         const cookies = request ? request.cookies : null;
         const session = new Session(server, idSession, tenant, cookies);
+        return session;
+    }
+    public createSessionForTenant(
+        server: boc.Server, idSession: string, tenant: string): boc.Session {
+
+        const session = new Session(server, idSession, tenant, null);
         return session;
     }
 }

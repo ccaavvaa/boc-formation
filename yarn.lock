@@ -133,12 +133,12 @@
   resolved "http://verdaccio/@phoenix%2fboc-prof/-/boc-prof-0.1.0.tgz#5ce9ef876f581a591ffc9390d38fdb24b35b0d78"
   integrity sha512-Y/YCKV2zN+DCVePKSzk2uTc6Flw93ntJaZ7Bb1bAsP/xAEA6o0Wrh0SHf7v4KypPV0iL308utxzA4lyWdJsuMQ==
 
-"@phoenix/boc-server@^2.2.0":
-  version "2.2.3"
-  resolved "http://verdaccio/@phoenix%2fboc-server/-/boc-server-2.2.3.tgz#62bac552534518541e5e1689aa7357c039589024"
-  integrity sha512-7rp1BGWKMgcl2dlAIaNXhtFsKXiMqVFzFgsT2tPx47yZuJbgRjtT6uwDXZwkRtGjIVv7aEeceQ17ez35qivb7A==
+"@phoenix/boc-server@^3.0.0-beta.0":
+  version "3.0.0-beta.0"
+  resolved "http://verdaccio/@phoenix%2fboc-server/-/boc-server-3.0.0-beta.0.tgz#65efc3f4ca202bbee22e7bc6eec2ec5eebf30960"
+  integrity sha512-TEh94+MB+ro1sgrW78jqdcE649TFxI9ypLqExX2gu2P54ee02bcWa5t9UFj6vs32VwzGmS50IsCEPwmebjmS/w==
   dependencies:
-    "@phoenix/boc" "^2.5.0"
+    "@phoenix/boc" "^3.0.0-beta.0"
     "@phoenix/boc-interfaces" "^1.1.0"
     "@phoenix/server-commons" "^1.0.0"
     "@phoenix/service-route" "^1.0.1"
@@ -149,10 +149,10 @@
     lodash "^4.17.4"
     uuid "^3.3.2"
 
-"@phoenix/boc@^2.5.0":
-  version "2.5.2"
-  resolved "http://verdaccio/@phoenix%2fboc/-/boc-2.5.2.tgz#6f072ad0556e9ed4310dec146c26bafaea564f4c"
-  integrity sha512-uoZaI+isCEmS9/gL5SioBeVsaqqOxyD+ArGOB/4LVy0k59woMOt7pVFNTAYfHR+5uS6UETibkSfWtQEIIfTSCA==
+"@phoenix/boc@^3.0.0-beta.0":
+  version "3.0.0-beta.0"
+  resolved "http://verdaccio/@phoenix%2fboc/-/boc-3.0.0-beta.0.tgz#6b68cd122ff602256ab2d046b74693bb9646dcc0"
+  integrity sha512-ASihEAY8Psqs3mfLPOcSRUVkz+6jQbhu9BfPrVsBygAA/eDZKM/knMwsXHXraoGagxdxTazwG7hA8iLy/+q8MA==
   dependencies:
     "@phoenix/boc-interfaces" "^1.1.0"
     "@phoenix/codata" "^1.1.1"
