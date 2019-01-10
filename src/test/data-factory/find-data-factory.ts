@@ -10,6 +10,7 @@ describe('FindDataFactory', function () {
     it('simple', async function () {
         const result = await session.getDataset({
             datasetName: 'persons',
+            pageSize: 5,
         });
         expect(result.count).to.be.greaterThan(0);
         expect(result.value.length).equals(5);
