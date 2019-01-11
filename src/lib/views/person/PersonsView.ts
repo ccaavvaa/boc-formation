@@ -4,7 +4,6 @@ import { PersonData } from './PersonData';
 @boc.ClsInfo({
     title: 'PersonsView',
     primaryKey: ['id'],
-    businessKey: ['id'],
     isTransient: true,
     serializeDirectives: [
         'persons',

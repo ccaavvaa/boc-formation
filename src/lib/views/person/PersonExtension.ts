@@ -4,7 +4,6 @@ import { Person } from '../../models/Person';
 @boc.ClsInfo({
     title: 'PersonExtension',
     primaryKey: ['id'],
-    businessKey: ['id'],
     modelConstr: Person,
     isTransient: true,
 })
