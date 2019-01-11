@@ -11,7 +11,7 @@ if (!tenants.length) {
     tenants.push(boc.Server.defaultTenantName);
 }
 
-const settings: bocServer.IHttpBocServerSettings = {
+export const settings: bocServer.IHttpBocServerSettings = {
     viewServer: new ViewServer(),
     errorHandlerOptions: config.errorHandlerSettings,
     sessionOptions: config.sessionSettings,
