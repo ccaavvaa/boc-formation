@@ -11,6 +11,7 @@ import { ProjectMemberView } from './views/project/ProjectMemberView';
 import { TestFindRelation } from './views/find-relation/TestFindRelation';
 import { PersonData } from './views/person/PersonData';
 import { PersonsView } from './views/person/PersonsView';
+import { MyTask } from './views/tasks/MyTask';
 
 export const businessClasses = [
     HelloWorldView,
@@ -31,4 +32,6 @@ export const businessClasses = [
     PersonData,
 
     LookupView,
+
+    MyTask,
 ];

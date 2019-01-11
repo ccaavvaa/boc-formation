@@ -7,6 +7,7 @@ import { PersonExtensionRules } from './rules/person/PersonExtensionRules';
 import { ProjectViewRules } from './rules/project/ProjectViewRules';
 import { ProjectMemberViewRules } from './rules/project/ProjectMemberViewRules';
 import { PersonsViewRules } from './rules/person/PersonsViewRules';
+import { MyTaskRules } from './rules/tasks/MyTaskRules';
 export const businessRules = [
     HelloWorldViewRules,
     // Person
@@ -18,5 +19,7 @@ export const businessRules = [
     ProjectRules,
     ProjectMemberRules,
     ProjectViewRules,
-    ProjectMemberViewRules
+    ProjectMemberViewRules,
+    // Tasks
+    MyTaskRules,
 ];
