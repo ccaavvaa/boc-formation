@@ -109,10 +109,10 @@
     normalize-path "^2.0.1"
     through2 "^2.0.3"
 
-"@phoenix/bo-code-gen@^2.0.0":
-  version "2.2.1"
-  resolved "http://verdaccio/@phoenix%2fbo-code-gen/-/bo-code-gen-2.2.1.tgz#52ef90290714799c76fa518b0f8967ac01bd85c9"
-  integrity sha512-2VmrWNqT+cJXqANeEFfVI/JbpSm0DVWbToOiQTGiVJR5HYZyRq6xdWTESY2or0Z6t18rMsvSnfzqtlPkDs+eCw==
+"@phoenix/bo-code-gen@^2.3.0":
+  version "2.3.0"
+  resolved "http://verdaccio/@phoenix%2fbo-code-gen/-/bo-code-gen-2.3.0.tgz#d25fc847f350b20e1d2c42907f91e2b6d5890870"
+  integrity sha512-7z6VFH66lsvk/ro3udetbYQ0SGtTx4bwcmnNaflgaLxLldQ3Jp0ZyiMDv1SnxcZI59HJeZzSweJ3SZCFXSV0sw==
   dependencies:
     "@phoenix/schema" "^1.0.0"
     commander "^2.9.0"
