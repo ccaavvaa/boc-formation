@@ -109,10 +109,10 @@
     normalize-path "^2.0.1"
     through2 "^2.0.3"
 
-"@phoenix/bo-code-gen@^2.3.0":
-  version "2.3.0"
-  resolved "http://verdaccio/@phoenix%2fbo-code-gen/-/bo-code-gen-2.3.0.tgz#d25fc847f350b20e1d2c42907f91e2b6d5890870"
-  integrity sha512-7z6VFH66lsvk/ro3udetbYQ0SGtTx4bwcmnNaflgaLxLldQ3Jp0ZyiMDv1SnxcZI59HJeZzSweJ3SZCFXSV0sw==
+"@phoenix/bo-code-gen@^2.4.0":
+  version "2.4.0"
+  resolved "http://verdaccio/@phoenix%2fbo-code-gen/-/bo-code-gen-2.4.0.tgz#b56fd03911fabbdb76fe6121ccc6fef0fbb4c1b6"
+  integrity sha512-h2T2qOWPSai0fvXpvnxOkE/r8+cFOXi3GRDcfVnvqsLDud3YF4FAO1OPudQDaG7Mv95TnHgwAD80DXxc8V5diQ==
   dependencies:
     "@phoenix/schema" "^1.0.0"
     commander "^2.9.0"
@@ -149,10 +149,10 @@
     lodash "^4.17.4"
     uuid "^3.3.2"
 
-"@phoenix/boc@^3.0.0":
-  version "3.0.0"
-  resolved "http://verdaccio/@phoenix%2fboc/-/boc-3.0.0.tgz#46ef3c34472be23d2aacfa1f2fedc8df3d07d5b4"
-  integrity sha512-2R6MEs7XtVoRPL8vtXfstPSPPFmvCZtLPpRoa4MfWpR2pAvZUpBtDoTovxpmJ+O9nSa/H278m+jmiqJIcaVl5A==
+"@phoenix/boc@^3.0.0", "@phoenix/boc@^3.1.0":
+  version "3.1.0"
+  resolved "http://verdaccio/@phoenix%2fboc/-/boc-3.1.0.tgz#e059a1b844037658ed75293cddac5eddaeb3451a"
+  integrity sha512-ZM8Q8abp0i4knYLs1LZYUns0piJAnOfAvqGKQJMaCBmXJ3kl7wnasl+TakZ3MeRqRMakE2rxCvqBH2oTY+VZ/A==
   dependencies:
     "@phoenix/boc-interfaces" "^1.1.0"
     "@phoenix/codata" "^1.1.1"
@@ -208,9 +208,9 @@
     "@phoenix/schema" "^1.0.0"
 
 "@phoenix/schema@^1.0.0":
-  version "1.1.7"
-  resolved "http://verdaccio/@phoenix%2fschema/-/schema-1.1.7.tgz#ee11823a7ab9e33c50784a0a61d547ff90309380"
-  integrity sha512-a4QlnxYXNRuunDEQCI5ThAAEstwL5PQguK9DDDaVTtw7a1/3NKSkp0rCwmJbeHOj113ykVI9lo2vUnPOCU/4wg==
+  version "1.2.0"
+  resolved "http://verdaccio/@phoenix%2fschema/-/schema-1.2.0.tgz#18f366211515878a791dea3cdb645431d52ff2e2"
+  integrity sha512-1gfX2C/8JaWqWpH+PcNv3B/6J70Tr8ofOea99s6LAytMoYV/6PkdqWeFyIfjmYyIOLnZ/S9YhOx9Df7ktQFjpA==
   dependencies:
     argparse "^1.0.10"
 

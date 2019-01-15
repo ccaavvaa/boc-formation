@@ -33,26 +33,26 @@ export class ProjectViewRules {
             }
         }
     }
-    @boc.ModelChanged({
-        constr: ProjectView,
-    })
-    public static async initSyncho(target: ProjectView, msg: boc.Message) {
-        let membersSync: boc.RelationSynchronizer<
-            Project, ProjectMember, ProjectView, ProjectMemberView>
-            = target.mappings.membersSync;
-        if (membersSync) {
-            await membersSync.set_Source(null);
-            for (const member of await target.members.toArray()) {
-                await target.members.unlink(member);
-            }
-        } else {
-            membersSync = new boc.RelationSynchronizer<
-                Project, ProjectMember, ProjectView, ProjectMemberView>();
-            target.mappings.membersSync = membersSync;
-        }
-        await membersSync.set_Source(target.model.members);
-        await membersSync.set_Destination(target.members);
-    }
+    // @boc.ModelChanged({
+    //     constr: ProjectView,
+    // })
+    // public static async initSyncho(target: ProjectView, msg: boc.Message) {
+    //     let membersSync: boc.RelationSynchronizer<
+    //         Project, ProjectMember, ProjectView, ProjectMemberView>
+    //         = target.mappings.membersSync;
+    //     if (membersSync) {
+    //         await membersSync.set_Source(null);
+    //         for (const member of await target.members.toArray()) {
+    //             await target.members.unlink(member);
+    //         }
+    //     } else {
+    //         membersSync = new boc.RelationSynchronizer<
+    //             Project, ProjectMember, ProjectView, ProjectMemberView>();
+    //         target.mappings.membersSync = membersSync;
+    //     }
+    //     await membersSync.set_Source(target.model.members);
+    //     await membersSync.set_Destination(target.members);
+    // }
     @boc.Action({
         constr: ProjectView,
         actionId: 'members.$new'

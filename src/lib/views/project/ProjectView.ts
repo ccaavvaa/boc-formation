@@ -32,7 +32,8 @@ export class ProjectView extends boc.ViewModel<Project> {
                 settings: {
                     roleProp: 'members',
                     oppositeConstr: ProjectMemberView,
-                }
+                    syncSource: 'members',
+                },
             },
         ];
     }
