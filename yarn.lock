@@ -110,9 +110,9 @@
     through2 "^2.0.3"
 
 "@phoenix/bo-code-gen@^2.4.0":
-  version "2.4.0"
-  resolved "http://verdaccio/@phoenix%2fbo-code-gen/-/bo-code-gen-2.4.0.tgz#b56fd03911fabbdb76fe6121ccc6fef0fbb4c1b6"
-  integrity sha512-h2T2qOWPSai0fvXpvnxOkE/r8+cFOXi3GRDcfVnvqsLDud3YF4FAO1OPudQDaG7Mv95TnHgwAD80DXxc8V5diQ==
+  version "2.4.1"
+  resolved "http://verdaccio/@phoenix%2fbo-code-gen/-/bo-code-gen-2.4.1.tgz#67b9669b22db26afbe589fa756a5588f030339d3"
+  integrity sha512-byIzWVAWiDLf9FkQxYomZpmhdHtOCUwNofXunPetYExzba2lWIWDS8CLsPVYjeL/ytBRKB/uBUcDUeyQBaVzTw==
   dependencies:
     "@phoenix/schema" "^1.0.0"
     commander "^2.9.0"
@@ -134,9 +134,9 @@
   integrity sha512-Y/YCKV2zN+DCVePKSzk2uTc6Flw93ntJaZ7Bb1bAsP/xAEA6o0Wrh0SHf7v4KypPV0iL308utxzA4lyWdJsuMQ==
 
 "@phoenix/boc-server@^3.0.0":
-  version "3.0.0"
-  resolved "http://verdaccio/@phoenix%2fboc-server/-/boc-server-3.0.0.tgz#adcb5e7ac5d2fe5634b84e7b672e7594f7462d5e"
-  integrity sha512-VuJwGluQIEovK2CSURn7wa4Lx+VCnjYTUrZh49vN8OLF45qWeFOO1qQqLDP5isGcyvRzPfwzA5S1DqmV5DtsmA==
+  version "3.0.1"
+  resolved "http://verdaccio/@phoenix%2fboc-server/-/boc-server-3.0.1.tgz#9bb442dcb7f483138071d29c53926ad586068fd8"
+  integrity sha512-tGydtxYEPK45HUGhb7D7TMVIgVRFMGCmK/ghdPLTdQY0PDkTx7lIzqSpqJ+qBFGlkEuxe1SjAnzTKDK0UBzvKw==
   dependencies:
     "@phoenix/boc" "^3.0.0"
     "@phoenix/boc-interfaces" "^1.1.0"
@@ -150,9 +150,9 @@
     uuid "^3.3.2"
 
 "@phoenix/boc@^3.0.0", "@phoenix/boc@^3.1.0":
-  version "3.1.0"
-  resolved "http://verdaccio/@phoenix%2fboc/-/boc-3.1.0.tgz#e059a1b844037658ed75293cddac5eddaeb3451a"
-  integrity sha512-ZM8Q8abp0i4knYLs1LZYUns0piJAnOfAvqGKQJMaCBmXJ3kl7wnasl+TakZ3MeRqRMakE2rxCvqBH2oTY+VZ/A==
+  version "3.2.0"
+  resolved "http://verdaccio/@phoenix%2fboc/-/boc-3.2.0.tgz#a3249f3a2b07e4e63e7ea145fc84fef2e5753704"
+  integrity sha512-WWQCE/RHB/SnJ5N72HFvPG16ualmfdhHYkOeQmuk+/j4UrennjdH2XOBk/FPbtFPNkYhDha3hf0sVYAfRSJXBA==
   dependencies:
     "@phoenix/boc-interfaces" "^1.1.0"
     "@phoenix/codata" "^1.1.1"
@@ -4776,9 +4776,9 @@ rechoir@^0.6.2:
     resolve "^1.1.6"
 
 reflect-metadata@^0.1.10:
-  version "0.1.12"
-  resolved "http://verdaccio/reflect-metadata/-/reflect-metadata-0.1.12.tgz#311bf0c6b63cd782f228a81abe146a2bfa9c56f2"
-  integrity sha512-n+IyV+nGz3+0q3/Yf1ra12KpCyi001bi4XFxSjbiWWjfqb52iTTtpGXmCCAOWWIAn9KEuFZKGqBERHmrtScZ3A==
+  version "0.1.13"
+  resolved "http://verdaccio/reflect-metadata/-/reflect-metadata-0.1.13.tgz#67ae3ca57c972a2aa1642b10fe363fe32d49dc08"
+  integrity sha512-Ts1Y/anZELhSsjMcU605fU9RE4Oi3p5ORujwbIKXfWa+0Zxs510Qrmrce5/Jowq3cHSZSJqBjypxmHarc+vEWg==
 
 regenerator-runtime@^0.11.0:
   version "0.11.1"
