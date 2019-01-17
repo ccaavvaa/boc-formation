@@ -1,17 +1,17 @@
 {
 	"$schema": "http://phenix.salviadeveloppement.com/json-schema/mdr-schema.json",
 	"version": "1.0.0",
-    "type": "object",
-    "name": "PersonData",
-    "theme": "person",
-    "isTransient": true,
-    "title": "Person Data View",
-    "findClass": "Person",
-    "findOptions": {
+	"type": "object",
+	"name": "PersonData",
+	"theme": "person",
+	"isTransient": true,
+	"title": "Person Data View",
+	"findClass": "Person",
+	"findOptions": {
 		"count": true,
 		"limit": 5
-    },
-    "properties":{
+	},
+	"properties": {
 		"personId": {
 			"type": "string",
 			"format": "code"
@@ -23,8 +23,8 @@
 			"type": "string"
 		},
 		"birthDate": {
-			"type":"string",
-			"format":"date"
+			"type": "string",
+			"format": "date"
 		}
-    }
+	}
 }
