@@ -1,0 +1,43 @@
+{
+	"$schema": "http://phenix.salviadeveloppement.com/json-schema/mdr-schema.json",
+	"version": "1.0.0",
+	"type": "object",
+    "title": "ProjectView",
+    "isTransient": true,
+    "name": "ProjectView",
+    "model": "Project",
+    "theme": "project",
+    "mappingDef": [
+        {
+            "from": "#model",
+            "mappings": [
+                "code",
+                "name",
+                {
+                    "from": "id",
+                    "to": "projectId"
+                }
+            ]
+        }
+    ],
+    "serializeDirectives": [
+        "members",
+        "todos"
+    ],
+    "relations": {
+        "members": {
+            "type": "hasMany",
+            "aggregationKind": "none",
+            "isTransient": true,
+            "foreignEntity": "ProjectMemberView",
+            "syncSource": "members"
+        },
+        "todos": {
+            "type": "hasMany",
+            "aggregationKind": "none",
+            "isTransient": true,
+            "foreignEntity": "TodoView",
+            "syncSource": "todos"
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{
+	"$schema": "http://phenix.salviadeveloppement.com/json-schema/mdr-schema.json",
+	"version": "1.0.0",
+	"type": "object",
+	"title": "TodoView",
+    "name": "TodoView",
+    "model": "Todo",
+    "isTransient": true,
+    "theme": "project",
+    "mappingDef": [
+        {
+            "from": "#model",
+            "mappings": [
+                "title",
+                "progress",
+                "dueDate",
+                {
+                    "from": "id",
+                    "to": "todoId"
+                }
+            ]
+        }
+    ]
+}

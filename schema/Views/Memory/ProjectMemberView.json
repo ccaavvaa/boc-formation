@@ -1,0 +1,35 @@
+{
+    "$schema": "http://phenix.salviadeveloppement.com/json-schema/mdr-schema.json",
+    "version": "1.0.0",
+    "type": "object",
+    "isTransient": true,
+    "title": "ProjectMemberView",
+    "name": "ProjectMemberView",
+    "model": "ProjectMember",
+    "theme": "project",
+    "mappingDef": [
+        {
+            "from": "#model",
+            "mappings": [
+                "role",
+                {
+                    "from": "person",
+                    "mappings": [
+                        {
+                            "from": "extension",
+                            "mappings": [
+                                "fullName"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "properties": {
+        "personId": {
+            "type": "string",
+            "format": "code"
+        }
+    }
+}
