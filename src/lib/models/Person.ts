@@ -16,9 +16,9 @@ export class Person extends boc.ModelObject {
                 settings: {
                     roleProp: 'teamMembers',
                     oppositeConstr: Person,
+                    oppositeRoleProp: 'manager',
                     key: ['id'],
                     oppositeKey: ['refManager'],
-                    oppositeRoleProp: 'manager',
                 }
             },
             // relation manager

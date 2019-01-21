@@ -1,6 +1,6 @@
 import * as boc from '@phoenix/boc';
 import 'mocha';
-import * as chai from 'chai';
+import { assert, expect } from 'chai';
 import '../debug-test';
 import { createContainer } from '../test-helpers';
 import { Project } from '../../lib/models/Project';
@@ -9,9 +9,8 @@ import {
 } from '../../lib/rules/project/ProjectRules';
 import { Person } from '../../lib/models/Person';
 import { ProjectMember } from '../../lib/models/ProjectMember';
+import { Todo } from '../../lib/models/Todo';
 // tslint:disable:only-arrow-functions
-
-const assert = chai.assert;
 
 describe('Project', function () {
     it('code, name should not be empty', async function () {
@@ -96,5 +95,16 @@ describe('Project', function () {
         await project.set_name('n');
         v = ProjectRules.getProjectName(project);
         assert(v === project.name);
+    });
+    it('isDone', async function () {
+        const c = createContainer();
+        const project = await c.createNew<Project>(Project);
+        expect(project.isDone).eql(true);
+        const todo = await c.createNew<Todo>(Todo);
+        await todo.set_progress(10);
+        await project.todos.link(todo);
+        expect(project.isDone).eql(false);
+        await todo.set_progress(100);
+        expect(project.isDone).eql(true);
     });
 });

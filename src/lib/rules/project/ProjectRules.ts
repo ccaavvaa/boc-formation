@@ -11,6 +11,30 @@ export const projectNotEmptyProperties: Array<keyof Project & string> = [
 
 export class ProjectRules {
 
+    @boc.ObjectInit({
+        constr: Project
+    })
+    public static async listenTodos(target: Project, msg: boc.Message) {
+        target.todos.listen('todos');
+    }
+    @boc.ObjectInit({
+        constr: Project
+    })
+    @boc.PropChange({
+        constr: Project,
+        path: 'todos',
+        propName: 'progress',
+    })
+    @boc.RoleChange({
+        constr: Project,
+        propName: 'todos',
+    })
+    public static async setIsDone(target: Project, msg: boc.Message) {
+        const todos = await target.todos.toArray();
+        const isDone = !todos.length || !todos.find((todo) => todo.progress !== 100) ? true : false;
+        await target.set_isDone(isDone);
+    }
+
     @boc.Validate({
         constr: Project,
     })

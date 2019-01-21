@@ -73,6 +73,19 @@ export class Project extends boc.ModelObject {
         return this.setProp('name', value);
     }
 
+    // read write property isDone
+    @boc.PropertyInfo({
+        type: 'boolean',
+        title: 'Project',
+    })
+    public get isDone(): boolean {
+        return this.getProp('isDone');
+    }
+
+    public set_isDone(value: boolean): Promise<boc.IRuleExecutionResult[]> {
+        return this.setProp('isDone', value);
+    }
+
     // relation todos
     public todos: boc.HasMany<Project, Todo>;
 

@@ -12,6 +12,7 @@ import { TestFindRelation } from './views/find-relation/TestFindRelation';
 import { PersonData } from './views/person/PersonData';
 import { PersonsView } from './views/person/PersonsView';
 import { MyTask } from './views/tasks/MyTask';
+import { TodoView } from './views/project/TodoView';
 
 export const businessClasses = [
     HelloWorldView,
@@ -27,6 +28,7 @@ export const businessClasses = [
 
     ProjectView,
     ProjectMemberView,
+    TodoView,
 
     TestFindRelation,
     PersonData,
