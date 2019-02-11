@@ -93,4 +93,18 @@ export class PersonRules {
     public static async remove(target: Person, msg: boc.Message) {
         await target.toDelete();
     }
+    @boc.Action({
+        constr: Person,
+        actionId: 'Person.getFullName',
+    })
+    public static async getFullNameAsRule(target: Person, msg: boc.Message): Promise<string> {
+        const fullName: string[] = [];
+        if (target.firstName) {
+            fullName.push(target.firstName);
+        }
+        if (target.name) {
+            fullName.push(target.name.toUpperCase());
+        }
+        return fullName.join(' ');
+    }
 }

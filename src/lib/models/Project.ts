@@ -18,6 +18,7 @@ export class Project extends boc.ModelObject {
                 settings: {
                     roleProp: 'todos',
                     oppositeConstr: Todo,
+                    key: ['id'],
                     oppositeKey: ['parentId'],
                     oppositeRoleProp: 'parentObject',
                 }
@@ -28,6 +29,7 @@ export class Project extends boc.ModelObject {
                 settings: {
                     roleProp: 'members',
                     oppositeConstr: ProjectMember,
+                    key: ['id'],
                     oppositeKey: ['parentId'],
                     oppositeRoleProp: 'parentObject',
                 }

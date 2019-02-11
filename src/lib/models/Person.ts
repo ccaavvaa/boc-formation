@@ -125,6 +125,11 @@ export class Person extends boc.ModelObject {
         return this.setProp('initials', value);
     }
 
+    // method getFullName
+    public getFullName(data?: any): Promise<string> {
+        return this.callAction<string>('Person.getFullName', data);
+    }
+
     // relation teamMembers
     public teamMembers: boc.Many<Person, Person>;
 
